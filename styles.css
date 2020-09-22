@@ -1,0 +1,187 @@
+@charset "UTF-8";
+
+@font-face { 
+    font-family: Montserrat;             /* define una fuente */
+}
+
+body {      /* los estilos aplicados a una etiqueta valen para todos los casos */                                             
+	background-color:white;  /** El fondo de la página en carga es blanco*/                  
+	background-image: url(imagenes/fondo.jpg); /*El fondo de la página será la imagen */
+    background-repeat:repeat; 
+    background-attachment: fixed; /*El fondo de la página se mantendrá quieto mientras se desplaza con el scroll*/
+
+}
+
+.menunav { /* estilo para el menu de navegación */ 
+	margin: 0; /* El margen es igual a 0, para que el fondo se empareje con el del título 1 (h1) */
+    background: rgba(0,0,0,0.3); /*La imagen será semi-transparente */
+    border-bottom:2px solid white; /*El borde de abajo será blanco */
+    padding-left:8%; /*El espacio entre el contenido del menú y borde de esta caja será del 8%, para que cada vez que la ventana se reduzca el espacio sea relativamente el mismo */
+    margin-right:3%; /*El espacio entre el borde de la ventana y el menú será de 3%, para que cada vez que la ventana se reduzca el espacio sea relativamente el mismo */
+
+}
+
+.botonMenu {      /* estilo para cada botón del menu de navegación */ 
+	font-family: Montserrat;  /* fuente seleccionada */
+	font-size: 14px; /*tamaño de la fuente fijo */
+	text-align: center; /*alineación del texto centrado*/
+	width: 145px; /*tamaño de cada botón definido*/
+	background:rgba(0,0,0,0.5); /*fondo de cada botón es semi transparente*/
+    background-image: none; /*el fondo será el color anterior*/
+	padding:10px 10px 10px 10px; /*el espacio entre el texto del botón y el borde del botón será fijo*/
+    border:none;/*no tendrá borde cada botón*/
+	cursor: pointer; /*al pasar por el botón el cursor cambiará al aspecto de enlace (está por default, sin esta linea no cambiará nada*/
+    color:white; /*el color del texto es blanco*/
+}
+.botonMenu:link{ /*cuando el enlace ya fue usado*/
+	text-decoration: none;	/* para que no subraye los vínculos */ 
+	cursor: pointer; /*al pasar por el botón el cursor cambiará al aspecto de enlace (está por default, sin esta linea no cambiará nada*/
+}
+.botonMenu:hover { /*cuando el cursor está sobre el botón*/
+	color:#FFFFFF; /*el color del texto es blanco*/
+	text-shadow: 1px 1px #000000; /*se genera una sombra en el texto de color negro*/
+    font-weight: bold; /*el texto se vuelve más ancho*/
+    border-radius: 6px 6px 0 0; /*los bordes superiores de los botones se redondean*/
+	background: rgba(0,0,0,0.8); /*el fondo del botón se pondrá un poco menos transparente*/
+    background-image: none; /*el fondo es el color anterior*/
+	cursor:pointer; /*lo mismo de los códigos anteriores*/
+}  
+
+.pagina{ /*definimos el codigo que usaremos como página */
+    background: rgba(180,220,220,0.6); /*el fondo es celeste semitransparente*/
+    border: 2px solid black; /*el borde es negro*/
+    margin: 10px 4% 2% 4%; /*el espacio entre el borde de la ventana y el borde de está página será proporcional en cuanto la ventana cambie de tamaño*/
+    padding: 10px 40px 20px 10px; /*el espacio entre el borde de la página y su contenido es fijo*/
+    font-size:1.7em; /*el tamaño de las letras en fijo*/
+    font-family:arial; /*la fuente del texto será arial*/
+
+}
+
+.caja002{ /*caja 2 (aún no se usa) */
+    background:none;
+    box-shadow:10px 10px 5px black;
+    
+}
+a:link { /*definimos el codigo de enlace*/
+	color: #10ae8c; /*el color del enlace es aguamarina */
+	text-decoration:none; /*eliminamos la decoración de texto, para que no subraye los vínculos */ 
+}
+
+a:hover{ /*definimos el codigo cuando el cursor esté sobre el enlace*/
+    color:#0e9e95; /*el color cambia lijeramente*/
+    text-decoration: none; /*lo mismo de arriba*/
+}
+
+
+h1{ /*Definimos el título h1 */
+    text-align: left; /*alineamos el texto a la izquierda*/
+    color:black; /*el color será negro*/
+    text-shadow: 0 0 2px #FFF, 0 0 1px #FFF, 0 0 1px #FFF, 0 0 1px #FFF, 0 0 2px #FFF, 0 0 1px #FFF, 0 0 1px #FFF, 0 0 1px #FFF, 0 0 1px #FFF, 0 0 1px #FFF, 0 0 1px #FFF,2px 4px 5px black;/**Añadimos sombra sobre la sombra, así crea un efecto de borde en el texto**/
+    font-size: 3.5em; /*el tamaño del texto será fija dependiendo del sistema*/
+    font-family:Montserrat; /*la fuente usada */
+    padding-bottom:10px; /*el espacio entre el texto y su límite inferior es fijo*/
+    margin-left:20%; /*el espacio entre el borde de la ventana izquierda y el título es relativo */
+
+}
+
+.titulo01{ /*configuramos las propiedades del título principal (h1) de cada página, sabiendo que es un enlace*/
+    color:black; /*el color será negro y no aguamarina */
+}
+
+.titulo01:hover{ /*cuando el cursor está sobre el título principal de cada página*/
+    color:black; /*el color será negro*/
+}
+
+.titulo01:link{ /*cuando el enlace ya fue usado*/
+    color:black; /*el color será negro*/
+}
+
+h2{ /*Definimos el subtítulo h2 (el título de cada página) */
+    color:black; /*el color es negro*/
+    font-size:35px; /*el tamaño es fijo*/
+    font-family:Montserrat; /*la fuente usada*/
+    background:rgba(0,0,0,0.3); /*el fondo es semi transparente igual al de la caja de navegación*/
+    text-shadow: 0 0 2px #FFF, 0 0 1px #FFF, 0 0 1px #FFF, 0 0 1px #FFF, 0 0 2px #FFF, 0 0 1px #FFF, 0 0 1px #FFF, 0 0 1px #FFF, 0 0 1px #FFF, 0 0 1px #FFF, 0 0 1px #FFF,2px 4px 5px black;/**Añadimos sombra sobre la sombra, así crea un efecto de borde en el texto**/
+    margin:0; /*la distancia entre la caja con el resto de cajas es 0, para que no haya un espacio entre esté título y la caja de navegación */
+    padding-left:8%; /*el espacio entre borde izquierdo de la caja y el texto será relativo con respecto al tamaño de la ventana */
+    padding-top:20px; /*el espacio entre el borde superior de la caja y el texto es fijo*/
+    padding-bottom:25px; /*el espacio entre el borde inferior de la caja y el texto es fijo*/
+    margin-right:3%; /*el espacio entre el borde izquierdo de la caja con el de la ventana es relativo con respecto al tamaño de la ventana*/
+}
+
+.izquierda{ /*el contenido que esté a la izquierda de una caja (lista)*/
+    text-align:justify; /*el texto se alinea de borde a borde*/
+    padding:2%; /*el espacio entre los bordes de esta caja con el contenido es relativo al tamaño de la ventana */
+    width:65%; /*el tamaño de el contenido de la izquierda es del 65%*/
+    
+}
+
+.derecha{ /*el contenido que esté a la derecha de una caja (lista)*/
+    text-align:justify; /*el texto se alinea de borde a borde*/
+    padding:2%; /*el espacio entre los bordes de esta caja con el contenido es relativo al tamaño de la ventana */
+    width:35% /*el tamaño de el contenido de la izquierda es del 35%*/
+    
+}
+
+.derechaImagen{ /*las imagenes que están a la derecha de una caja (lista) */
+    text-align:Center; /*la imagen o el contenido, se alineará con el centro*/
+    padding:2% 2% 0 0.5%; /*el espacio entre los bordes de esta caja con el contenido es relativo al tamaño de la ventana */
+    width:35%;/*el tamaño de el contenido de la izquierda es del 35%*/
+    padding-bottom: 0px; /*el espacio entre el borde inferior es fijo */
+}
+
+.descripcionImagen{ /*la descripcion de la imagen*/
+    text-align:left; /*el texto se alinea a la izquierda*/
+    font-size:0.7em; /*el tamaño del texto es fijo dependiendo del sistema*/
+    padding-top:0px; /*el espacio entre el borde superior es fijo */
+    padding-left:0.7em; /*el espacio entre el borde izquierdo es fijo dependiendo del sistema*/
+    
+    
+}
+
+.imagen01{ /*la imagen que aparece en la parte superior izquierda*/
+    width:5%; /*el tamaño es relativo al tamaño de la ventana*/
+    max-width: 100px; /*el tamaño máximo será de 100px*/
+    min-width:40px; /*el tamaño mínimo será de 40px*/
+    border:1px solid black; /*el borde es negro*/
+    position: absolute; /*la posición es fija*/
+    left:50px; /*está a 50px de la izquierda*/
+    top:50px; /*está a 50px de arriba*/
+}
+
+.imagen02{ /*no está siendo usado */
+    position:relative;
+    right:0%;
+    width:70%;
+    min-width:100px;
+    max-width:700px;
+    
+    
+}
+
+@media only screen and (max-width: 860px) { /*cuando el tamaño de la ventana es menor o igual a 860px*/
+    .menunav { /*modificamos los parámetros de la caja de navegación*/
+    max-width:500px;  /*el tamaño máximo de cada caja será fijo, así la primera fila tenga máximo tres botones*/
+    }
+    
+    h1{ /*el título principal cambia*/
+        max-width:500px; /*el tamaño máximo de la caja donde está el título es más pequeño*/
+        font-size:2.8em; /*el tamaño del texto es más pequeño*/
+        padding-top:10px; /*bajamos un poco el texto. La distancia entre el borde superior de la caja con el texto es fija*/
+    }
+    
+    h2{ /*el título de la página cambia*/
+        max-width:500px; /*el tamaño máximo de la caja donde está el título es más pequeño*/
+    }
+    
+    .pagina{ /*la caja de página cambia*/
+        max-width:500px; /*el tamaño máximo de la caja donde está el título es más pequeño*/
+        line-height: 1.7; /*la distancia entre cada renglón del texto es un poco más grande*/
+        font-size:1.2em; /*el tamaño del texto es más pequeño*/
+    }
+    
+    .descripcionImagen{ /*la descripción de la imagen cambia*/
+        line-height: 1.2; /*la distancia entre cada renglón es un poco más grande*/
+        text-align:justify; /*el texto se alinea de borde a borde*/
+    }
+}
