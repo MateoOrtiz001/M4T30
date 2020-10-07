@@ -1,0 +1,72 @@
+<!doctype html> <!-- Identificamos el archivo como un documento html-->
+<html>
+    <head><!-- aquí editamos la información sobre el documento-->
+        <meta charset="UTF-8"><!-- codificamos el archivo con UTF-8, para pode usar la "ñ" y tildes-->
+        <meta lang="es"><!-- especificamos que el archivo está en español-->
+        <title>Forjaz - Personajes Destacados</title><!-- nombramos la página, esto aparecerá en la pestaña del navegador-->
+        <link href="styles.css" rel="stylesheet" type="text/css">
+        <link  rel="icon"   href="imagenes/favicon2.ico" type="image/ico"><!--añadimos el favicon (imagen que aparece en la pestaña de la página)-->
+    
+    </head>
+    <body class="body3"><!-- aquí editamos la información que mostrará la página-->
+        <h1><a class="titulo01" href="index.html" target="_self">Forjaz: La ciudad bajo la montaña</a></h1><!-- ponemos el título más grande, que es h1-->
+        <h2>Personajes Destacados</h2> <!-- ponemos el segundo más grande, que es h2-->
+         <header><!-- el elemento header incluye el menu desplegable y el ícono que lo despliega -->
+            <input type="checkbox" id="btn-menu"><!-- checkbox permite la opción boleana -->
+            <label for="btn-menu"><img src="imagenes/menu.png" width="30px"></label>
+            <!-- la imagen del ícono se muestra como label del checkbox pero se oculta cuando no se necesita -->
+            <nav class="menu">
+               <ul class="menunav"> <!-- los botones son elementos de una lista que define el menu pero mantiene el mismo diseño de cada botón, la posición de esta lista depende del estado del checkbox-->
+				<li><a href="ubicacion.html" target="_self"><button class="botonMenu">Ubicación</button></a></li>
+				<li><a href="personajes.html" target="_self"><button class="botonMenu">Personajes</button></a></li>
+                <li><a href="actividades.html" target="_self"><button class="botonMenu">Actividades</button></a></li>
+                <li><a href="historia.html" target="_self"><button class="botonMenu">Historia</button></a></li>
+				<li><a href="referencias.html" target="_self"><button class="botonMenu">Referencias</button></a></li> 
+                </ul>
+            </nav>
+        </header>
+        <img src="imagenes/muradin02.png" class="imagen01" alt="imagen de muradin"  >
+        <div class="pagina">
+        <table> <!-- tabla simple para la organización de la pagina-->
+            <tr>  <td class="izquierda">La ciudad es habitada principalmente por enanos y gnomos, estos últimos después de que su ciudad fuera invadida.</td>
+            <td class="cajaDerecha"><img src="imagenes/enanos.gif" class="foto1"></td></tr></table>
+            <h3>Concilio de los Tres Martillos</h3>
+        <p class="izquierda">
+            El reino de los Enanos es gobernada por tres enanos líderes que representan a cada clan de enanos: 
+            </p>
+            
+            <table  class="tablauno"> <!-- tabla del estilo tablauno-->
+                <tr><th colspan="2"><!-- esta celda ocupa dos celdas en horizontal-->Muradin Barbabronce </th>
+                </tr>
+                <tr><th colspan="2" class="cajaSuperior"><!--caja especial que normalmente está oculta hasta que la ventana sea menor a 600px--><img src="imagenes/muradin.jpg" class="foto1" alt="Muradin Barbabronce"></th>
+                </tr>
+                <tr class="tr1"><!--celda del estilo tr1--><td class="cajaDerecha"><!--celda que se oculta cuando el tamaño de ventana es menor a 600px--><p align="center"><img src="imagenes/muradin.jpg" class="imagenTabla"  alt="Muradin Barbabronce"></p> </td>
+                <td class="izquierda">Líder del clan Barbabronce, hermano del antiguo rey y actual "mensajero de la tierra" Magni Barbabronce. Durante la Tercera Guerra se creyó muerto en Rasganorte, pero durante el retorno del rey exánime apareció como cabeza de las expediciones al asedio del trono de hielo. Igual que el resto del concilio, después de que su hermano Magni fuese petrificado con una maldición de ulduar, Muradin pasó a ser parte de los líderes del reino de Khaz Modan. <a href="https://wow.gamepedia.com/Muradin_Bronzebeard" target="_blank">Más información</a> </td>
+                </tr></table><!--NOTA: cuando la celda de estilo "cajaDerecha" se oculta, la celda de estilo "izquierda" pasa a ocupar el 100% del ancho de la tabla-->
+            
+            <!--en las siguientes tablas se utiliza código similar-->
+            <table  class="tablauno">
+               <tr><th colspan="2">Moira Thaurissan </th>
+                </tr>
+                <tr><th colspan="2" class="cajaSuperior"><img src="imagenes/moira.jpg" class="foto1" alt="Moira Thaurissan"></th>
+                </tr>
+            <tr class="tr2">
+                <td class="izquierda">Líder del clan Hierro negro, hija del antiguo rey Magni, esposa del antiguo líder del clan Hierro negro Dagran Thaurissan. Después de ser secuestrada por el clan Hierronegro, lugar donde le fue mostrado ese respeto que su padre no le tenía a la hora de tomar el trono del rey, regresaría a Forjaz a reclamar el trono después de la maldición de Magni, así pasó a ser parte del concilio en representación del clan Hierro Negro. <a href="https://wow.gamepedia.com/Moira_Thaurissan" target="_blank">Más Información</a></td>
+                <td class="cajaDerecha"><p align="center"><img src="imagenes/moira.jpg" class="imagenTabla" alt="Moira Thaurissan"></p> </td>
+                </tr></table>
+            <table  class="tablauno">
+                <tr><th colspan="2">Falsad Martillosalvaje </th>
+                </tr>
+                <tr><th colspan="2" class="cajaSuperior"><img src="imagenes/falsad.jpg" class="foto1" alt="Falsad Martillosalvaje"></th>
+                </tr>
+                <tr class="tr1"><td class="cajaDerecha"><p align="center"><img src="imagenes/falsad.jpg" class="imagenTabla" alt="Falsad Martillosalvaje"> </p></td>
+                <td class="izquierda">Líder del clan Martillo salvaje: los enanos del norte, después de ser desterrados de su antigua capital "Grim Batol" por una maldición, los enanos martillo salvaje decidieron empezar a vivir una vida más rústica sin tener una capital bajo la montaña. Sin embargo, tras enterarse de la maldición de Magni, Falsad fue el encargado por parte del clan para representarlo en el concilio. <a href="https://wow.gamepedia.com/Falstad_Wildhammer" target="_blank">Más Información</a> </td>
+            </tr>
+                <tr class="tr2"><!--esta celda ocupa espacio de dos celdas, como las celdas principales--><td colspan="2">Puedes leer más sobre la historia del concilio <a href="historia.html#martillos" target="_blank">aquí</a><!--enlace a la sección "La Guerra de los tres martillos" de la página de "Historia"-->  </td></tr>
+            </table>
+        
+        </div>
+    </body>
+    
+    
+</html>
