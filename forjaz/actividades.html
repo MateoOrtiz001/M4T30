@@ -1,0 +1,132 @@
+<!doctype html> <!-- Identificamos el archivo como un documento html-->
+<html>
+    <head><!-- aquí editamos la información sobre el documento-->
+        <meta charset="UTF-8"><!-- codificamos el archivo con UTF-8, para pode usar la "ñ" y tildes-->
+        <meta lang="es"><!-- especificamos que el archivo está en español-->
+        <title>Forjaz - Actividades y Eventos</title><!-- nombramos la página, esto aparecerá en la pestaña del navegador-->
+        <link href="styles.css" rel="stylesheet" type="text/css">
+        <link  rel="icon"   href="imagenes/favicon2.ico" type="image/ico"><!--añadimos el favicon (imagen que aparece en la pestaña de la página)-->
+    
+    </head>
+       <body class="body4"><!-- aquí editamos la información que mostrará la página-->
+        <h1><a class="titulo01" href="forjaz.html" target="_self">Forjaz: La ciudad bajo la montaña</a>
+        </h1><!-- ponemos el título más grande, que es h1-->
+        <a id="inicio"></a>
+        <h2>Actividades</h2> <!-- ponemos el segundo más grande, que es h2-->
+         <header><!-- el elemento header incluye el menu desplegable y el ícono que lo despliega -->
+            <input type="checkbox" id="btn-menu"><!-- checkbox permite la opción boleana -->
+            <label for="btn-menu"><img src="imagenes/menu.png" width="30px"></label>
+            <!-- la imagen del ícono se muestra como label del checkbox pero se oculta cuando no se necesita -->
+            <nav class="menu">
+               <ul class="menunav"> <!-- los botones son elementos de una lista que define el menu pero mantiene el mismo diseño de cada botón, la posición de esta lista depende del estado del checkbox-->
+				<li><a href="ubicacion.html" target="_self"><button class="botonMenu">Ubicación</button></a></li>
+				<li><a href="personajes.html" target="_self"><button class="botonMenu">Personajes</button></a></li>
+                <li><a href="actividades.html" target="_self"><button class="botonMenu">Actividades</button></a></li>
+                <li><a href="historia.html" target="_self"><button class="botonMenu">Historia</button></a></li>
+				<li><a href="referencias.html" target="_self"><button class="botonMenu">Referencias</button></a></li> 
+                </ul>
+            </nav>
+        </header>
+        <a href="../index.html" target="_self"><img src="imagenes/muradin02.png" class="imagen01" alt="imagen de muradin"  ></a><!-- La imagen que está siempre ajustada a la izquierda arriba -->
+ 
+        <div class="pagina">
+            <p class="izquierda">Entre las actividades realizadas en Forjaz encontramos eventos culturales o actividades comunes.
+               </p>
+            <table class="tablaContenidos"><!-- creamos una tabla donde se pueda desplazar más rápido entre contenidos de la página-->
+                <tr class="trContenidos"><th class="thContenidos">Contenidos</th></tr>
+                <tr class="trContenidos"><td><a href="#eventos">Eventos Culturales</a></td></tr>
+                <tr class="trContenidos"><td><a href="#actividades">Actividades Comunes</a></td></tr>     <!-- cada enlace lleva a cada sección de la página-->          
+                
+            </table>
+ 
+            <a name="eventos" ></a><!--esta sección lleva el nombre "eventos" para ser referenciado en el enlace de la tabla de contenidos-->
+            <br>
+            <h4>Eventos</h4><!--subtítulo 4, más grande que el 3-->
+                <h3>La Fiesta de la cerverza</h3>
+            <table  class="tablauno"> <!--caja del estilo tablauno para la organización de la página-->
+                <tr><th colspan="2" class="cajaSuperior"><!-- igual que en la página anterior, esta caja está oculta en estado normal y aparece cuando el tanaño de ventana es menor a 600px--><img src="imagenes/evento2.jpg" class="foto1" alt="La fiesta de la cerverza"></th>
+                </tr><tr>
+                <td class="izquierda">Entre los eventos más emblemáticos que ocurren en la ciudad se encuentra el de la Fiesta de la Cerveza. Se celebra cada año entre septiembre y octubre. Un evento donde se reunen las facciones de la alianza en una de las actividades que más le gustan a los enanos.<br><br> Dentro de las actividades a realizar se encuentran:
+                    <li><!--creamos una lista -->Atrapar a un <a href="https://es.wowhead.com/npc=23487/wolpertinger-salvaje" target="_blank"><!--enlace a un hipervinculo, el enlace se abre en una ventana nueva, como en el resto de hipervinculos--> Wolpentinger Salvaje</a>.</li>
+                    <li>Carrera de <a href="https://es.wowhead.com/npc=2098/carnero" target="_blank"> carnernos</a>.</li>
+                    <li>Preparación de cerveza.</li>
+                    <li>Y mucho más.</li></td>
+                <td class="cajaDerecha"><!-- igual que en la página anterior, esta caja está  en estado normal y se oculta cuando el tanaño de ventana es menor a 600px--><p align="center"><img src="imagenes/evento2.jpg" class="imagen02"  alt="La fiesta de la cerverza"></p> </td>
+                </tr>
+            
+            </table>
+                <!--el codigo usado en las siguientes tablas son prácitamente iguales al de la primera-->
+                <h3>Festival del Invierno</h3>
+                <table  class="tablauno">
+                <tr><th colspan="2" class="cajaSuperior"><img src="imagenes/evento3.jpg" class="foto1" alt="La fiesta de la cerverza"></th>
+                </tr><tr>
+                <td class="izquierda">Uno de los eventos más esperados en todo el reino, en diciembre llega el gran padre del invierno a Forjaz para dar regalos a todos aquellos que se hayan portado bien. Una fecha especial para compartir con amigos y disfrutar del festín de despedida del invierno.<br><br>Dentro de las actividades a realizar se encuentran:
+                    <li>Repartir regalos entre amigos.</li>
+                    <li>Hacer comidas festivas.</li>
+                    <li>Compartir las experiencias con el gran padre del invierno.</li>
+                    <li>Y mucho más.</li></td>
+                <td class="cajaDerecha"><p align="center"><img src="imagenes/evento3.jpg" class="imagen02"  alt="La festival del invierno"></p> </td>
+                </tr>
+            
+            </table>
+            
+            <a name="actividades"></a><br><!--esta sección lleva el nombre "actividades" para ser referenciado en el enlace de la tabla de contenidos-->
+            <h4 >Actividades</h4> <!--subtítulo 4, más grande que el 3-->
+            <h3>Herrería y forja</h3>
+            <table  class="tablauno">
+                <tr><th colspan="2" class="cajaSuperior"><img src="imagenes/herrero.jpg" class="foto1" alt="herrero"></th>
+                </tr><tr>
+                <td class="izquierda">Precisamente como se llama la capital, Forjaz es una gran forja, justo en el medio de la cueva se encuentra la gran forja, donde los más grandes herreros  forjan los armamentos de mayor calidad.</td>
+                <td class="cajaDerecha"><p align="center"><img src="imagenes/herrero.jpg" class="imagen02" alt="herrero"></p> </td>
+                </tr>
+            
+            </table>
+            
+
+            <h3>Arqueología</h3>
+            <table  class="tablauno">
+                <tr><th colspan="2" class="cajaSuperior"><img src="imagenes/bibliotecaForjaz.jpg" class="foto1" alt="la biblioteca de forjaz"></th>
+                </tr><tr>
+                <td class="izquierda">La segunda profesión más popular y por la cual destacan los enanos es la arqueología, parece tener la colección más grande de artefactos arqueológicos entre las razas de Azeroth, principalmente, por la curiosidad del pasado de su raza como terráneos.</td>
+                <td class="cajaDerecha"><p align="center"><img src="imagenes/bibliotecaForjaz.jpg" class="imagen02" alt="la biblioteca de forjaz"></p> </td>
+                </tr>
+            
+            </table>
+
+            <h3>Ingeniería</h3>
+            <table  class="tablauno">
+                <tr><th colspan="2" class="cajaSuperior"><img src="imagenes/fabricaForjaz.jpg" class="foto1" alt="fabrica de aviones de forjaz"></th>
+                </tr><tr>
+                <td class="izquierda">Forjaz, además de ser el hogar de los enanos, también ha sido el segundo hogar de los gnomos, muy conocidos por su avanzada ingeniería y construcción de artefactos. Prueba de ello es la conexión de Forjaz con Ventormenta (la capital del reino de los humanos) a través de un tranvía subterráneo, recorrido que recorta muchísimos kilómetros de distancia entre los dos paises.</td>
+                <td class="cajaDerecha"><p align="center"><img src="imagenes/fabricaForjaz.jpg" class="imagen02" alt="fabrica de aviones de forjaz"></p> </td>
+                </tr>
+            
+            </table>
+            
+            <h3>Subastas</h3>
+            <table  class="tablauno">
+                <tr><th colspan="2" class="cajaSuperior"><img src="imagenes/subastaForjaz.jpg" class="foto1" alt="casa de subastas de forjaz"></th>
+                </tr><tr>
+                <td class="izquierda">Forjaz ha sido la casa de la subasta en los reinos de la Alianza, las subastas fueron gran parte de las actividades más importantes que sucedían en Forjaz hasta la creación de otra casa en Ventormenta (capital de los humanos).</td>
+                <td class="cajaDerecha"><p align="center"><img src="imagenes/subastaForjaz.jpg" class="imagen02" alt="casa de subastas de forjaz"></p> </td>
+                </tr>
+            
+            </table>
+            
+            <h3>Vuelos de Grifos</h3>
+            <table  class="tablauno">
+                <tr><th colspan="2" class="cajaSuperior"><img src="imagenes/jinete.jpg" class="foto1" alt="jinete de grifo"></th>
+                </tr><tr>
+                <td class="izquierda">El clan martillo salvaje han sido grandes adiestradores de <a href="https://wow-es.gamepedia.com/Grifo" target=_blank>Grifos</a>, montar estas nobles bestias ha sido una costumbre que se ha desarrollado incluso en el resto de razas que pertenecen a la alianza.</td>
+                <td class="cajaDerecha"><p align="center"><img src="imagenes/jinete.jpg" class="imagen02" alt="jinete de grifo"></p> </td>
+                </tr>
+            
+            </table>
+            
+            <p class="izquierda"><a href="#inicio">Volver arriba</a></p><!--enlace para ir arriba de la página-->
+            
+        </div>
+    </body>
+    
+    
+</html>
