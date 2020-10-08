@@ -1,52 +1,40 @@
-<!doctype html> <!-- Identificamos el archivo como un documento html-->
+<!doctype html>
 <html>
-    <head><!-- aquí editamos la información sobre el documento-->
+    <head>
         <meta charset="UTF-8"><!-- codificamos el archivo con UTF-8, para pode usar la "ñ" y tildes-->
         <meta lang="es"><!-- especificamos que el archivo está en español-->
-        <title>Forjaz - Página Principal</title><!-- nombramos la página, esto aparecerá en la pestaña del navegador-->
-        <link href="styles.css" rel="stylesheet" type="text/css">
-        <link  rel="icon"   href="imagenes/favicon2.ico" type="image/ico"><!--añadimos el favicon (imagen que aparece en la pestaña de la página)-->
-    
+        <title>M4T30- Página Principal</title><!-- nombramos la página, esto aparecerá en la pestaña del navegador-->
+        <link href="style.css" rel="stylesheet" type="text/css">
+        <link  rel="icon"   href="favicon.ico" type="image/ico"><!--añadimos el favicon (imagen que aparece en la pestaña de la página)--> 
     </head>
     
-    <body><!-- aquí editamos la información que mostrará la página-->
-        <h1><a class="titulo01" href="index.html" target="_self">Forjaz: La ciudad bajo la montaña</a>
-        </h1><!-- ponemos el título más grande, que es h1-->
+    <body>
+        <!-- contenido que está fijo arriba a la izquierda-->
+         <img src="forjaz/imagenes/muradin02.png" class="imagen01" alt="imagen de muradin">  
+         <p class="texto01">Imagen para retornar a esta página desde cualquier página</p>
+        <!-- contenido de página-->
+        <h1> Páginas de M4T30</h1>
+        <br>
+        <div class="pagina">
+            <h2>Contenido</h2><br>
+            <p class="parrafoPrincipal">Esta es la página principal, desde acá podrás navegar por todas mis páginas, no olvides que en el respositorio está todo completamente documentado.</p>
+        <br>
+            <table class="tablaCentral">
+                <tr><td class="celda"><a href="forjaz/forjaz.html"> <img src="imagenes/forjaz.png" class="opacity" width="400px"></a></td></tr>
         
-        <h2>Página Principal</h2> <!-- ponemos el segundo más grande, que es h2-->
-         <header><!-- el elemento header incluye el menu desplegable y el ícono que lo despliega -->
-            <input type="checkbox" id="btn-menu"><!-- checkbox permite la opción boleana -->
-            <label for="btn-menu"><img src="imagenes/menu.png" width="30px"></label>
-            <!-- la imagen del ícono se muestra como label del checkbox pero se oculta cuando no se necesita -->
-            <nav class="menu">
-               <ul class="menunav"> <!-- los botones son elementos de una lista que define el menu pero mantiene el mismo diseño de cada botón, la posición de esta lista depende del estado del checkbox-->
-				<li><a href="ubicacion.html" target="_self"><button class="botonMenu">Ubicación</button></a></li>
-				<li><a href="personajes.html" target="_self"><button class="botonMenu">Personajes</button></a></li>
-                <li><a href="actividades.html" target="_self"><button class="botonMenu">Actividades</button></a></li>
-                <li><a href="historia.html" target="_self"><button class="botonMenu">Historia</button></a></li>
-				<li><a href="referencias.html" target="_self"><button class="botonMenu">Referencias</button></a></li> 
-                </ul>
-            </nav>
-        </header>
-        <img src="imagenes/muradin02.png" class="imagen01" alt="imagen de muradin"  ><!-- La imagen que está siempre ajustada a la izquierda arriba -->
-        
-        <div class="pagina"><!-- la caja principal en donde se escribe todo el texto-->
-                <h3>Capital del Reino de los Enanos (World Of Warcraft)</h3><!--subtítulo principal-->
-            
-            <!--distribuimos el diseño en cajas, así podemos hacer textos a la izquierda y a la derecha-->
-            <table class="cajaSuperior" align="center"><!--esta caja está oculta y se activa cuando el tamaño de ventana es menor a 600px-->
-                <tr><td>
-               <img align="center" class="foto1" src="imagenes/fondo03.jpg" alt=""/></td></tr><br><tr><td>Entrada principal de la capital </td></tr> 
             </table><br>
-            <table>
+            <h2>Otros</h2>
+            <br>
+            <table style="margin:auto">
                 <tr>
-                <td class="izquierda">Forjaz es una capital de la Alianza, ciudad principal de los Enanos y los Gnomos de los Reinos del Este.<br>Hogar de los enanos gobernado bajo el concilio de los tres marillos.<br><br>Llamada la ciudad bajo la montaña al ser construida en el norte de la montaña en "Dun Morogh", es muestra de los grandes conocimientos en la arqueología y arquitectura de estas criaturas.</td>
-                <td class="cajaDerecha"> <!--esta celda aparece y se oculta cuando la ventana es menor a 600px-->  <img src="imagenes/fondo03.jpg" class="imagen02" alt="imagen de muradin" class="descripcionImagen"><br>Entrada principal de la capital </td>
+                    <td><a href="https://www.facebook.com/tiozitro777" target="_blank"><img src="imagenes/logoFacebook.png" width="75px" ></a></td>
+                    <td><a href="https://twitter.com/ZitroMateo666" target="_blank"><img src="imagenes/logoTwitter.png" width="75px" ></a></td>
+                    <td><a href="https://www.youtube.com/channel/UClP_Lmn7-I25jTA0-kM3m_w" target="_blank"><img src="imagenes/logoYoutube.png" width="75px" ></a></td>
                 </tr>
+            
             </table>
-
+            <p style="text-align: center"><a href="https://www.gametracker.com/player/%7Cz%7CM4T30%7Cz%7C/74.91.114.8:27018/" target="_blank"><img src="http://cache.gametracker.com/player/%7Cz%7CM4T30%7Cz%7C/74.91.114.8:27018/b_560x95.png" alt=""/></a></p>
         </div>
-
     </body>
-
+    
 </html>
