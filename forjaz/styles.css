@@ -3,7 +3,7 @@
 /*Seleccionamos una fuente para varios estilos*/
 @font-face {
     font-family: Monterrat;
-    src: url('../fonts/Montserrat_Medium.otf');
+    src: url('fonts/Montserrat_Medium.otf');
 }
 
 /*** CODIGO DE LOS FONDOS DE LAS DIFERENTES PÁGINAS ***/
@@ -153,6 +153,44 @@ h2{
     border-top: 2px solid white; 
     border-left: 2px solid white;
     border-right: 2px solid white;
+    
+}  
+
+/*** CASO ESPECIAL PARA EL NUEVO ENLACE***/
+/** Prácticamente es el mismo código, solo se diferencia en el :hover**/
+.botonMenuMap {      
+	font-family: Montserrat;  /* fuente seleccionada */
+	font-size: 14px; /*tamaño de la fuente fijo */
+	text-align: center; /*alineación del texto centrado*/
+	width: 145px; /*tamaño de cada botón definido*/
+	background:rgba(0,0,0,0.5); /*fondo de cada botón es semi transparente*/
+    border:0px solid white; /*el borde del botón al comienzo será de 0px, es decir, no se verá */
+    background-image: none; /*el fondo será el color anterior*/
+	padding:10px 10px 10px 10px; /*el espacio entre el texto del botón y el borde del botón será fijo*/
+	cursor: pointer; /*al pasar por el botón el cursor cambiará al aspecto de enlace (está por default, sin esta linea no cambiará nada*/
+    color:white; /*el color del texto es blanco*/
+    margin-top:-4px; /*movemos los botones un poco hacia arriba*/
+}
+
+/*Cuando el enlace ya fue usado*/
+.botonMenuMap:link{ 
+	text-decoration: none;	/* para que no subraye los vínculos */ 
+	cursor: pointer; /*al pasar por el botón el cursor cambiará al aspecto de enlace (está por default, sin esta linea no cambiará nada*/
+}
+
+/*Cuando el cursor está sobre el botón*/
+.botonMenuMap:hover { 
+	text-shadow: 1px 1px #000000; /*se genera una sombra en el texto de color negro*/
+    font-weight: bold; /*el texto se vuelve más ancho*/
+    border-radius: 6px 6px 0 0; /*los bordes superiores de los botones se redondean*/
+	background: rgba(0,0,0,0.8); /*el fondo del botón se pondrá un poco menos transparente*/
+    background-image: none; /*el fondo es el color anterior*/
+	cursor:pointer; /*lo mismo de los códigos anteriores*/
+    /*con las siguientes lineas de código los bordes superior,izquierdo y derecho se dibujan al pasar el cursor*/
+    border-top: 2px solid white; 
+    border-left: 2px solid white;
+    border-right: 2px solid white;
+    margin-top:-22px; /** Como este es un texto más largo, al tomar negrilla pasa a ser dos renglones por lo que hay que moverlo hacia arriba 22px**/
     
 }  
 
@@ -370,6 +408,13 @@ h4{
     
 }
 
+/*imagen utilizada en la página de mapaNav*/
+.imgMapNav{
+    position:absolute;
+    top:400px;
+    right:100px;
+    
+}
 
 
 
@@ -434,6 +479,16 @@ td{
     border:2px solid black;
     border-radius:5px;
 }
+
+/*Codigo de las animaciones JS*/
+.idCanvas{
+    pointer-events:none; 
+    overflow:hidden; 
+    width:750px; height:392px; 
+    position: absolute; 
+    left: 0px; top: 0px; 
+    display: block;
+}
 /** CODIGO ESPECIAL PARA CAJAS OCULTAS**/
 /* Cuando la pantalla es más grande de 601px */
 @media only screen and (min-width: 601px){ 
@@ -447,6 +502,7 @@ td{
         content:none;
     }
 }
+
 
 /** CODIGO ESPECIAL PARA OCULTAR UNA IMAGEN (Particularmente para la imagen de la página "ubicación)**/
 /*Cuando la pantalla tiene de máximo de 1265px */
@@ -462,18 +518,31 @@ td{
         z-index:2;   
     }   
 }
+    
+
+
+@media only screen and (max-width:1050px){
+    .imgMapNav{
+    display:none;
+    
+}
+}
 
 /** CONFIGURACIÓN CUANDO EL TAMAÑO DE LA VENTANA ES MENOR O IGUAL A 900px**/
 @media only screen and (max-width: 900px) {
     
 /** Menú de navegación y cabecera **/
-/*modificamos los parámetros de la caja de navegación*/    
+/*modificamos los parámetros de la caja de navegación*/ 
+
     .menunav { 
+        width:90%;
         max-width:500px;  /*el tamaño máximo de cada caja será fijo, así la primera fila tenga máximo tres botones*/
     }
     .botonMenu{
         width:100%; /*ajustamos el tamaño a un porcentaje fijo para que los botones no se salgan del menunav*/
     }
+    
+    
 /*el título principal cambia*/    
     h1{ 
         max-width:500px; /*el tamaño máximo de la caja donde está el título es más pequeño*/
@@ -504,19 +573,21 @@ td{
 
 /** Menú de navegación y cabecera **/
     .menunav {
-        max-width:300px;  /* esto es para que la primera fila tenga máximo dos botones*/
+        max-width:500px;  /* esto es para que la primera fila tenga máximo dos botones*/
+        background:none;
     }
      header label{
         display: block; /* se muestra el checkbox cuando se reduce la ventana*/
     } 
     .menu {
         position: fixed;  /* sostiene la posición aunque se haga scroll en el contenido */
-        background: rgba(0.5, 0.5, 0.5, 0.2); /* rojo, verde, azul, alpha (transparencia) */
+        background: none;
 		z-index: 30; /* para asegurar que el menu esta por encima de todo lo demás*/
         width: 40%; /* se refiere al ancho del fondo del menu y no a los botones */
-        margin-left: -60%; /* se oculta porque se coloca por fuera de la ventana*/
-		margin-top: 4px;
+        margin-left: -120%; /* se oculta porque se coloca por fuera de la ventana*/
+		margin-top: -120px;
         transition: all 1s;   /* la animación de desplegar el menu dura 1 segundo*/
+        border-bottom: none;
     } 
     .menu ul {
         flex-direction: column;  /* se despliega en sentido vertical*/
@@ -527,6 +598,70 @@ td{
     #btn-menu:checked ~ .menu {  /* el checkbox controla las dos posiciones del menu */
         margin: 1px; 
     } 
+.botonMenu {      
+	font-family: Montserrat;  /* fuente seleccionada */
+	font-size: 14px; /*tamaño de la fuente fijo */
+	text-align: center; /*alineación del texto centrado*/
+	width: 500px; /*tamaño de cada botón definido*/
+	background:rgba(0,0,0,0.7); /*fondo de cada botón es semi transparente*/
+    border-radius:0;/*dejamos las esquinas rectas*/
+    border:0px solid white; /*el borde del botón al comienzo será de 0px, es decir, no se verá */
+    background-image: none; /*el fondo será el color anterior*/
+	padding:10px 10px 10px 10px; /*el espacio entre el texto del botón y el borde del botón será fijo*/
+	cursor: pointer; /*al pasar por el botón el cursor cambiará al aspecto de enlace (está por default, sin esta linea no cambiará nada*/
+    color:white; /*el color del texto es blanco*/
+
+}
+
+/*Cuando el enlace ya fue usado*/
+.botonMenu:link{ 
+	text-decoration: none;	/* para que no subraye los vínculos */ 
+	cursor: pointer; /*al pasar por el botón el cursor cambiará al aspecto de enlace (está por default, sin esta linea no cambiará nada*/
+}
+
+/*Cuando el cursor está sobre el botón*/
+.botonMenu:hover { 
+	text-shadow: 1px 1px #000000; /*se genera una sombra en el texto de color negro*/
+    font-weight: bold; /*el texto se vuelve más ancho*/
+	background: rgba(0,0,0,0.9); /*el fondo del botón se pondrá un poco menos transparente*/
+    background-image: none; /*el fondo es el color anterior*/
+	cursor:pointer; /*lo mismo de los códigos anteriores*/
+    /*con las siguientes lineas de código los bordes superior,izquierdo y derecho se dibujan al pasar el cursor*/
+    border: 2px solid white; 
+    
+}  
+.botonMenuMap {      
+	font-family: Montserrat;  /* fuente seleccionada */
+	font-size: 14px; /*tamaño de la fuente fijo */
+	text-align: center; /*alineación del texto centrado*/
+	width: 500px; /*tamaño de cada botón definido*/
+	background:rgba(0,0,0,0.7); /*fondo de cada botón es semi transparente*/
+    border:0px solid white; /*el borde del botón al comienzo será de 0px, es decir, no se verá */
+    border-radius:0;/*dejamos las esquinas rectas*/
+    background-image: none; /*el fondo será el color anterior*/
+	padding:10px 10px 10px 10px; /*el espacio entre el texto del botón y el borde del botón será fijo*/
+	cursor: pointer; /*al pasar por el botón el cursor cambiará al aspecto de enlace (está por default, sin esta linea no cambiará nada*/
+    color:white; /*el color del texto es blanco*/
+}
+
+/*Cuando el enlace ya fue usado*/
+.botonMenuMap:link{ 
+	text-decoration: none;	/* para que no subraye los vínculos */ 
+	cursor: pointer; /*al pasar por el botón el cursor cambiará al aspecto de enlace (está por default, sin esta linea no cambiará nada*/
+}
+
+/*Cuando el cursor está sobre el botón*/
+.botonMenuMap:hover { 
+	text-shadow: 1px 1px #000000; /*se genera una sombra en el texto de color negro*/
+    font-weight: bold; /*el texto se vuelve más ancho*/
+	background: rgba(0,0,0,0.9); /*el fondo del botón se pondrá un poco menos transparente*/
+    background-image: none; /*el fondo es el color anterior*/
+	cursor:pointer; /*lo mismo de los códigos anteriores*/
+    /*con las siguientes lineas de código los bordes superior,izquierdo y derecho se dibujan al pasar el cursor*/
+    border: 2px solid white; 
+    
+}      
+
     
 /** Estilos de párrafos y textos**/
 /*Imágenes*/
@@ -577,4 +712,14 @@ td{
         text-align:center;
     }
     
+}
+
+/*Codigo de las animaciones JS*/
+.idCanvas{
+    pointer-events:none; 
+    overflow:hidden; 
+    width:180px; height:95px; 
+    position: absolute; 
+    left: 0px; top: 0px; 
+    display: block;
 }
