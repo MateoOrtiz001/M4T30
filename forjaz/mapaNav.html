@@ -9,7 +9,7 @@
         <link href="styles.css" rel="stylesheet" type="text/css">
         <link  rel="icon"   href="imagenes/favicon2.ico" type="image/ico"><!--añadimos el favicon (imagen que aparece en la pestaña de la página)-->
     <script src="https://code.createjs.com/1.0.0/createjs.min.js"></script>
-<script src="mapaInteractivo.js"></script><!-- exportamos los archivos .js que correrá esta pagina-->
+<script src="mapaInteractivo.js"></script> <script src="mapaInteractivoCel.js"></script><!-- exportamos los archivos .js que correrá esta pagina-->
         
 <!-- codigo script de Adobe Animate -->        
 <script>
@@ -77,18 +77,47 @@ function handleComplete(evt,comp) {
                 </ul>
             </nav>
         </header>
-        <a href="../index.html" target="_self"><img src="imagenes/muradin02.png" class="imagen01" alt="imagen de muradin"  ></a><!-- La imagen que está siempre ajustada a la izquierda arriba -->
+        <img src="imagenes/muradin02.png" class="imagen01" alt="imagen de muradin"  ><!-- La imagen que está siempre ajustada a la izquierda arriba -->
         
         <div class="pagina" ><!-- la caja principal en donde se escribe todo el texto-->
                 <h3>Mapa de Forjaz Interactivo</h3><!--subtítulo principal-->
             <!-- cargamos el contenedor de la animacion-->
-              <div id="animation_container" style="background-color:rgba(255, 255, 255, 0.00); width:750px; height:392px">
+            <!-- tiene la clase "cuadroCel01" la cual hará desaparecer el contenido cuando el tamaño de la ventan sea menor a 600px-->
+              <div id="animation_container" style="background-color:rgba(255, 255, 255, 0.00); width:750px; height:392px" class="cuadroCel01">
 		      <canvas id="canvas" width="750" height="392" style="position: absolute; display: block; background-color:rgba(255, 255, 255, 0.00);"></canvas>
 		      <div id="dom_overlay_container" class="idCanvas">
 		      </div>
 	       </div>
-            
             <img src="imagenes/guardia.png" class="imgMapNav" width="400px">
+            
+            <!-- cargamos el otro JS, este se activará cuando el tamaño de la ventana sea menor a 600px-->
+            <div class="cuadroCel02" style="width:400px;margin:auto"><img src="imagenes/forjazMapCel.png" width="380px">
+            <table style="font-size: 30px;">
+                <tr>
+                    <td><!-- los botones que harán cambiar el texto y la imagen de abajo-->
+                <span id= "boton1" class="botonMapCel" style="background:rgb(204,204,0);color:rgb(204,204,0)" onclick="cambiarTexto1()"> O </span><!-- observe que a pesar de que cada boton tiene una clase, como cada uno tiene un color diferente, ese estilo lo cambiamos aquí mismo y no en el estilo de "botonMapCel". Igualmente, como queremos que solo se vea el cuadrado, ponemos el color del texto igual al fondo-->
+                <span id= "boton2" class="botonMapCel" style="background:rgb(255,101,0);color:rgb(255,101,0)" onclick="cambiarTexto2()"> O </span>
+                <span id= "boton3" class="botonMapCel" style="background:rgb(50,152,101);color:rgb(50,152,101)" onclick="cambiarTexto3()"> O </span>
+                <span id= "boton4" class="botonMapCel" style="background:rgb(152,101,152);color:rgb(152,101,152)" onclick="cambiarTexto4()"> O </span>
+                <span id= "boton5" class="botonMapCel" style="background:rgb(152,101,50);color:rgb(152,101,50)" onclick="cambiarTexto5()"> O </span>
+                <span id= "boton6" class="botonMapCel" style="background:rgb(101,152,255);color:rgb(101,152,255)" onclick="cambiarTexto6()"> O </span>
+                <span id= "boton7" class="botonMapCel" style="background:rgb(204,0,50);color:rgb(204,0,50)" onclick="cambiarTexto7()"> O </span>
+                <span id= "boton8" class="botonMapCel" style="background:rgb(0,50,255);color:rgb(0,50,255)" onclick="cambiarTexto8()"> O </span>
+                <span id= "boton9" class="botonMapCel" style="background:rgb(204,50,50);color:rgb(204,50,50)" onclick="cambiarTexto9()"> O </span>
+                <span id= "boton10" class="botonMapCel" style="background:rgb(101,204,50);color:rgb(101,204,50)" onclick="cambiarTexto10()"> O. </span>
+                    </td>
+                    </tr>
+                </table>
+            <table class="cajaMapaNav">
+                <tr>
+                <td class="izquierda" id="textoCel">1. El Trono: Lugar donde el consejo de los tres martillos trabajan todo el día sobre las decisiones tomadas en el reino de Khaz Modan. </td>
+                </tr>
+                <tr>
+                <td><img id="imgCel" onclick="cambiaFotos()"  src="imagenes/imgCel01.jpg" width="355px" /> </td>
+                </tr><!-- Esta visualización comenzará con la primera zona: "El Trono" -->
+            </table>
+            
+            </div>
 
         </div>
 
