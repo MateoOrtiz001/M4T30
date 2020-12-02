@@ -481,18 +481,18 @@ if (reversed == null) { reversed = false; }
 		  para el curso Gráfica interactiva de la Universidad Nacional de Colombia*/
 		
 		//////////////-- inicia el escenario
-		this.gotoAndStop(0); //--inicia la película
+		this.gotoAndStop(1); //--inicia la película
 		var escenario = this; //--define al escenario como una variable
 		
 		//--cada botón avanza al cuadro seleccionado +1
 		this.botonEnano.addEventListener("click", iruno.bind(this));
 		function iruno() {
-			escenario.gotoAndStop(0);
+			escenario.gotoAndStop(1);
 		}
 		
 		this.boton1.addEventListener("click", irdos.bind(this));
 		function irdos() {
-			escenario.gotoAndStop(1);
+			escenario.gotoAndStop(0);
 		}
 		
 		this.boton2.addEventListener("click", irtres.bind(this));
@@ -575,7 +575,7 @@ if (reversed == null) { reversed = false; }
 	this.instance_9 = new lib.derechaMapaInteractivo08();
 	this.instance_9.setTransform(398,18,0.3951,0.3951);
 
-	this.timeline.addTween(cjs.Tween.get({}).to({state:[]}).to({state:[{t:this.instance}]},1).to({state:[{t:this.instance_1}]},1).to({state:[{t:this.instance_2}]},1).to({state:[{t:this.instance_3}]},1).to({state:[{t:this.instance_4}]},1).to({state:[{t:this.instance_5}]},1).to({state:[{t:this.instance_6}]},1).to({state:[{t:this.instance_7}]},1).to({state:[{t:this.instance_8}]},1).to({state:[{t:this.instance_9}]},1).wait(1));
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.instance}]}).to({state:[]},1).to({state:[{t:this.instance_1}]},1).to({state:[{t:this.instance_2}]},1).to({state:[{t:this.instance_3}]},1).to({state:[{t:this.instance_4}]},1).to({state:[{t:this.instance_5}]},1).to({state:[{t:this.instance_6}]},1).to({state:[{t:this.instance_7}]},1).to({state:[{t:this.instance_8}]},1).to({state:[{t:this.instance_9}]},1).wait(1));
 
 	// botones
 	this.botonEnano = new lib.enano();
@@ -651,7 +651,7 @@ lib.properties = {
 	color: "#FFFFFF",
 	opacity: 0.00,
 	manifest: [
-		{src:"images/mapaInteractivo_atlas_1.png?1606836181479", id:"mapaInteractivo_atlas_1"}
+		{src:"images/mapaInteractivo_atlas_1.png", id:"mapaInteractivo_atlas_1"}
 	],
 	preloads: []
 };
