@@ -102,8 +102,9 @@ h2{
     padding-left:8%; /*el espacio entre borde izquierdo de la caja y el texto será relativo con respecto al tamaño de la ventana */
     padding-top:20px; /*el espacio entre el borde superior de la caja y el texto es fijo*/
     padding-bottom:25px; /*el espacio entre el borde inferior de la caja y el texto es fijo*/
-    margin-right:3%; /*el espacio entre el borde izquierdo de la caja con el de la ventana es relativo con respecto al tamaño de la ventana*/
+    margin-right:30%; /*el espacio entre el borde izquierdo de la caja con el de la ventana es relativo con respecto al tamaño de la ventana*/
     margin-left:1.5%;
+    width:90%;
 }
 
 /** El fondo de la lista de los botones del menu de navegación**/
@@ -113,8 +114,10 @@ h2{
     border-bottom:2px solid white; /*El borde de abajo será blanco */
     padding-top:-20px;
     padding-left:8%; /*El espacio entre el contenido del menú y borde de esta caja será del 8%, para que cada vez que la ventana se reduzca el espacio sea relativamente el mismo */
-    margin-right:3%; /*El espacio entre el borde de la ventana y el menú será de 3%, para que cada vez que la ventana se reduzca el espacio sea relativamente el mismo */
-    margin-left: -12%;
+    margin-right:.5%; /*el espacio entre el borde izquierdo de la caja con el de la ventana es relativo con respecto al tamaño de la ventana*/
+    margin-left:1.5%;
+    
+
 
 }
 
@@ -170,6 +173,7 @@ h2{
 	cursor: pointer; /*al pasar por el botón el cursor cambiará al aspecto de enlace (está por default, sin esta linea no cambiará nada*/
     color:white; /*el color del texto es blanco*/
     margin-top:-4px; /*movemos los botones un poco hacia arriba*/
+    
 }
 
 /*Cuando el enlace ya fue usado*/
@@ -190,7 +194,9 @@ h2{
     border-top: 2px solid white; 
     border-left: 2px solid white;
     border-right: 2px solid white;
-    margin-top:-22px; /** Como este es un texto más largo, al tomar negrilla pasa a ser dos renglones por lo que hay que moverlo hacia arriba 22px**/
+
+    width:180px; /**Hace un poco más ancho al botón para que no se deforme el mismo al convertir en negrita el texto**/
+    
     
 }  
 
@@ -533,10 +539,14 @@ td{
     
 /** Menú de navegación y cabecera **/
 /*modificamos los parámetros de la caja de navegación*/ 
-
+    .h2{
+    margin-right:3%; /*el espacio entre el borde izquierdo de la caja con el de la ventana es relativo con respecto al tamaño de la ventana*/
+    margin-left:1.5%;
+        
+    }
     .menunav { 
-        width:90%;
-        max-width:500px;  /*el tamaño máximo de cada caja será fijo, así la primera fila tenga máximo tres botones*/
+        margin-left:auto;
+        margin-right:auto;
     }
     .botonMenu{
         width:100%; /*ajustamos el tamaño a un porcentaje fijo para que los botones no se salgan del menunav*/
@@ -568,13 +578,16 @@ td{
     }
 }
 
-/** CONFIGURACIÓN CUANDO EL TAMAÑO DE LA VENTANA ES MENOR O IGUAL A 600px**/
-@media only screen and (max-width: 600px){
+/** CONFIGURACIÓN CUANDO EL TAMAÑO DE LA VENTANA ES MENOR O IGUAL A 750px**/
+@media only screen and (max-width: 750px){
 
+/** AQUÍ CAMBIAMOS SOLO LA FORMA DE NAVEGACIÓN, YA QUE AL INTRODUCIR UNA NUEVA PESTAÑA NO HAY ESPACIO PARA ÉSTA AL REDUCIR EL TAMAÑO DE LA VENTANA**/    
+    
 /** Menú de navegación y cabecera **/
     .menunav {
         max-width:500px;  /* esto es para que la primera fila tenga máximo dos botones*/
         background:none;
+        border-bottom: none;
     }
      header label{
         display: block; /* se muestra el checkbox cuando se reduce la ventana*/
@@ -604,7 +617,7 @@ td{
 	text-align: center; /*alineación del texto centrado*/
 	width: 500px; /*tamaño de cada botón definido*/
 	background:rgba(0,0,0,0.7); /*fondo de cada botón es semi transparente*/
-    border-radius:0;/*dejamos las esquinas rectas*/
+    border-radius:0px;/*dejamos las esquinas rectas*/
     border:0px solid white; /*el borde del botón al comienzo será de 0px, es decir, no se verá */
     background-image: none; /*el fondo será el color anterior*/
 	padding:10px 10px 10px 10px; /*el espacio entre el texto del botón y el borde del botón será fijo*/
@@ -624,10 +637,12 @@ td{
 	text-shadow: 1px 1px #000000; /*se genera una sombra en el texto de color negro*/
     font-weight: bold; /*el texto se vuelve más ancho*/
 	background: rgba(0,0,0,0.9); /*el fondo del botón se pondrá un poco menos transparente*/
+    border-radius:0px;
     background-image: none; /*el fondo es el color anterior*/
 	cursor:pointer; /*lo mismo de los códigos anteriores*/
     /*con las siguientes lineas de código los bordes superior,izquierdo y derecho se dibujan al pasar el cursor*/
     border: 2px solid white; 
+    
     
 }  
 .botonMenuMap {      
@@ -637,7 +652,7 @@ td{
 	width: 500px; /*tamaño de cada botón definido*/
 	background:rgba(0,0,0,0.7); /*fondo de cada botón es semi transparente*/
     border:0px solid white; /*el borde del botón al comienzo será de 0px, es decir, no se verá */
-    border-radius:0;/*dejamos las esquinas rectas*/
+    border-radius:0px;/*dejamos las esquinas rectas*/
     background-image: none; /*el fondo será el color anterior*/
 	padding:10px 10px 10px 10px; /*el espacio entre el texto del botón y el borde del botón será fijo*/
 	cursor: pointer; /*al pasar por el botón el cursor cambiará al aspecto de enlace (está por default, sin esta linea no cambiará nada*/
@@ -655,13 +670,18 @@ td{
 	text-shadow: 1px 1px #000000; /*se genera una sombra en el texto de color negro*/
     font-weight: bold; /*el texto se vuelve más ancho*/
 	background: rgba(0,0,0,0.9); /*el fondo del botón se pondrá un poco menos transparente*/
+    border-radius:0px;
     background-image: none; /*el fondo es el color anterior*/
 	cursor:pointer; /*lo mismo de los códigos anteriores*/
     /*con las siguientes lineas de código los bordes superior,izquierdo y derecho se dibujan al pasar el cursor*/
     border: 2px solid white; 
+    width:500px;/**como en el :hover cuando la pestaña está en tamaño normal convierte el ancho del botón en una cantidad específica, aquí lo cambiamos a 500px (que es el predeterminado en pestañas pequeñas)**/
     
 }      
 
+    
+/** CONFIGURACIÓN CUANDO EL TAMAÑO DE LA VENTANA ES MENOR O IGUAL A 600px**/    
+@media only screen and (max-width: 600px){
     
 /** Estilos de párrafos y textos**/
 /*Imágenes*/
