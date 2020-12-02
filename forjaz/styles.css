@@ -751,20 +751,25 @@ td{
     left: 0px; top: 0px; 
     display: block;
 }
-    
+  
+/* Hace desaparecer el contenedor del JS de ventana completa*/    
 .cuadroCel01{
     display:none;
         
 }
 
-    .cuadroCel02{
+/* Hace aparecer el contenedor del JS de ventana menor a 600px*/  
+.cuadroCel02{
        display:block; 
         
 }
+    /*Diseño del botón para cambiar la información de las zonas del mapa interactivo en 600px**/
     .botonMapCel{
         border:1px solid black;
+        cursor:pointer;/**Así, al pasar el cursor sobre el cuadro, se verá apuntando**/
         
     }
+    /*Diseño de la caja contenedora de la información*/
     .cajaMapaNav{
         background:rgba(105,43,8,0.4);
         border:2px solid black;
