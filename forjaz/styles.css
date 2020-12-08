@@ -605,7 +605,7 @@ td{
         background: none;
 		z-index: 30; /* para asegurar que el menu esta por encima de todo lo demás*/
         width: 40%; /* se refiere al ancho del fondo del menu y no a los botones */
-        margin-left: -120%; /* se oculta porque se coloca por fuera de la ventana*/
+        margin-left: -180%; /* se oculta porque se coloca por fuera de la ventana*/
 		margin-top: -120px;
         transition: all 1s;   /* la animación de desplegar el menu dura 1 segundo*/
         border-bottom: none;
