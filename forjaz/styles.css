@@ -2,8 +2,8 @@
 
 /*Seleccionamos una fuente para varios estilos*/
 @font-face {
-    font-family: Monterrat;
-    src: url('fonts/Montserrat_Medium.otf');
+    font-family: Montserrat;
+    src: url('../fonts/Montserrat-Medium.ttf');
 }
 
 /*** CODIGO DE LOS FONDOS DE LAS DIFERENTES PÁGINAS ***/
