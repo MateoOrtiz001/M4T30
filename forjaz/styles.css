@@ -3,8 +3,9 @@
 /*Seleccionamos una fuente para varios estilos*/
 @font-face {
     font-family: Montserrat;
-    src: url('../fonts/Montserrat-Medium.ttf');
+    src: url('../fonts/Montserrat-Regular.ttf'),url('../fonts/Montserrat-Bold.ttf'),url('../fonts/Montserrat-BoldItalic.ttf'),url('../fonts/Montserrat-Italic.ttf');
 }
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
 
 /*** CODIGO DE LOS FONDOS DE LAS DIFERENTES PÁGINAS ***/
 /*Código de la página principal */
@@ -613,9 +614,7 @@ td{
     .menu ul {
         flex-direction: column;  /* se despliega en sentido vertical*/
     } 
-    .menu li {
-    
-    }
+
     #btn-menu:checked ~ .menu {  /* el checkbox controla las dos posiciones del menu */
         margin: 1px; 
     } 
@@ -750,28 +749,29 @@ td{
     position: absolute; 
     left: 0px; top: 0px; 
     display: block;
-}
+    }
   
 /* Hace desaparecer el contenedor del JS de ventana completa*/    
-.cuadroCel01{
+    .cuadroCel01{
     display:none;
         
-}
+    }
 
 /* Hace aparecer el contenedor del JS de ventana menor a 600px*/  
-.cuadroCel02{
+    .cuadroCel02{
        display:block; 
         
-}
-    /*Diseño del botón para cambiar la información de las zonas del mapa interactivo en 600px**/
+    }
+/*Diseño del botón para cambiar la información de las zonas del mapa interactivo en 600px**/
     .botonMapCel{
         border:1px solid black;
         cursor:pointer;/**Así, al pasar el cursor sobre el cuadro, se verá apuntando**/
         
     }
-    /*Diseño de la caja contenedora de la información*/
+/*Diseño de la caja contenedora de la información*/
     .cajaMapaNav{
         background:rgba(105,43,8,0.4);
         border:2px solid black;
-	width:99%;
+	    width:99%;
     }
+}
