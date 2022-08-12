@@ -76,18 +76,23 @@ h2{
 
 /** Caja inferior **/
 .barra_inferior {
-    margin: -10px;
-    height:320px;
+    position:relative;
+    margin-left: -10px;
+    margin-right: -8px;
+    height:124px;
     background:#2C2C2C;
-}
-.barra_inferior div {
     padding: 40px;
+}
+.barra_inferior img {
+    margin:-40px;
 }
 
 .texto_Inferior{
     font-family: montserrat;
     color:white;
     font-size:30px;
+    position:relative;
+    left:50%;
 }
 
 /*** TABLA ***/
