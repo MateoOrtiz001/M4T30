@@ -3,11 +3,11 @@
 /*Seleccionamos una fuente para varios estilos*/
 @font-face {
     font-family: Montserrat;
-    src: url('../fonts/Montserrat-Regular.ttf'),url('../fonts/Montserrat-Bold.ttf'),url('../fonts/Montserrat-BoldItalic.ttf'),url('../fonts/Montserrat-Italic.ttf');
+    src: url('../../fonts/Montserrat-Regular.ttf'),url('../../fonts/Montserrat-Bold.ttf'),url('../../fonts/Montserrat-BoldItalic.ttf'),url('../../fonts/Montserrat-Italic.ttf');
 }
 @font-face{
     font-family: Jost;
-    src: url('../fonts/Jost-Regular.ttf'),url('../fonts/Jost-Italic.ttf'),url('../fonts/Jost-Bold.ttf'),url('../fonts/Jost-BoldItalic.ttf'),url('../fonts/Jost-SemiBold.ttf');
+    src: url('../../fonts/Jost-Regular.ttf'),url('../../fonts/Jost-Italic.ttf'),url('../../fonts/Jost-Bold.ttf'),url('../../fonts/Jost-BoldItalic.ttf'),url('../../fonts/Jost-SemiBold.ttf');
 }
 
 /*** CODIGO DE LOS FONDOS DE LAS DIFERENTES PÁGINAS ***/
