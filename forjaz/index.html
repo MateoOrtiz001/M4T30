@@ -6,14 +6,16 @@
         <title>Forjaz - Página Principal</title><!-- nombramos la página, esto aparecerá en la pestaña del navegador-->
         <link href="styles.css" rel="stylesheet" type="text/css">
         <link  rel="icon"   href="imagenes/favicon2.ico" type="image/ico"><!--añadimos el favicon (imagen que aparece en la pestaña de la página)-->
-    
+        <script  src="scripts.js"></script>
     </head>
     
     <body><!-- aquí editamos la información que mostrará la página-->
         <h1><a class="titulo01" href="index.html" target="_self">Forjaz: La ciudad bajo la montaña</a>
         </h1><!-- ponemos el título más grande, que es h1-->
+        <div class="cajaSup">
+            <h2>Pagina Principal</h2> <!-- ponemos el segundo más grande, que es h2-->
+        </div>
         
-        <h2>Página Principal</h2> <!-- ponemos el segundo más grande, que es h2-->
          <header><!-- el elemento header incluye el menu desplegable y el ícono que lo despliega -->
             <input type="checkbox" id="btn-menu"><!-- checkbox permite la opción boleana -->
             <label for="btn-menu"><img src="imagenes/menu.png" width="30px"></label>
@@ -25,28 +27,26 @@
                 <li><a href="actividades.html" target="_self"><button class="botonMenu">Actividades</button></a></li>
                 <li><a href="historia.html" target="_self"><button class="botonMenu">Historia</button></a></li>
 				<li><a href="referencias.html" target="_self"><button class="botonMenu">Referencias</button></a></li> 
-		       <li><a href="mapaNav.html" target="_self"><button class="botonMenuMap">Mapa Interactivo</button></a></li>
-              </ul>
+                <li><a href="mapaNav.html" target="_self"><button class="botonMenu">Mapa Interactivo</button></a></li>
+            </ul>
             </nav>
         </header>
         <a href="../index.html" target="_self"><img src="imagenes/muradin02.png" class="imagen01" alt="imagen de muradin"  ></a><!-- La imagen que está siempre ajustada a la izquierda arriba -->
         
         <div class="pagina"><!-- la caja principal en donde se escribe todo el texto-->
-                <h3>Capital del Reino de los Enanos (World Of Warcraft)</h3><!--subtítulo principal-->
-            
-            <!--distribuimos el diseño en cajas, así podemos hacer textos a la izquierda y a la derecha-->
-            <table class="cajaSuperior" align="center"><!--esta caja está oculta y se activa cuando el tamaño de ventana es menor a 600px-->
-                <tr><td>
-               <img align="center" class="foto1" src="imagenes/fondo03.jpg" alt=""/></td></tr><br><tr><td>Entrada principal de la capital </td></tr> 
-            </table><br>
-            <table>
-                <tr>
-                <td class="izquierda">Forjaz es una capital de la Alianza, ciudad principal de los Enanos y los Gnomos de los Reinos del Este.<br>Hogar de los enanos gobernado bajo el concilio de los tres marillos.<br><br>Llamada la ciudad bajo la montaña al ser construida en el norte de la montaña en "Dun Morogh", es muestra de los grandes conocimientos en la arqueología y arquitectura de estas criaturas.</td>
-                <td class="cajaDerecha"> <!--esta celda aparece y se oculta cuando la ventana es menor a 600px-->  <img src="imagenes/fondo03.jpg" class="imagen02" alt="imagen de muradin" class="descripcionImagen"><br>Entrada principal de la capital </td>
-                </tr>
-            </table>
-
+            <h3>Capital del Reino de los Enanos (World Of Warcraft)</h3><!--subtítulo principal-->
+            <div class="columnaIzq">
+                Forjaz es una capital de la Alianza, ciudad principal de los Enanos y los Gnomos de los Reinos del Este.<br>Hogar de los enanos gobernado bajo el concilio de los tres marillos.<br><br>Llamada la ciudad bajo la montaña al ser construida en el norte de la montaña en "Dun Morogh", es muestra de los grandes conocimientos en la arqueología y arquitectura de estas criaturas.
+            </div>
+            <div class="columnaDer">
+                <div class="imgConLeyenda">
+                    <img src="imagenes/fondo03.jpg" alt=""/>    
+                    <p> Entrada principal de la capital</p>
+                </div>
+            </div>
+            <br>
         </div>
+        <div id="oscuro">-</div>
 
     </body>
 

@@ -7,6 +7,10 @@
 }
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
 
+@font-face{
+    font-family: Folkard;
+    src: url('../fonts/folkard.ttf');
+}
 /*** CODIGO DE LOS FONDOS DE LAS DIFERENTES PÁGINAS ***/
 /*Código de la página principal */
 body {                           
@@ -69,10 +73,10 @@ body {
 /**Definimos el título h1 **/
 h1{ 
     text-align: left; /*alineamos el texto a la izquierda*/
-    color:black; /*el color será negro*/
-    text-shadow: 0 0 2px #FFF, 0 0 1px #FFF, 0 0 1px #FFF, 0 0 1px #FFF, 0 0 2px #FFF, 0 0 1px #FFF, 0 0 1px #FFF, 0 0 1px #FFF, 0 0 1px #FFF, 0 0 1px #FFF, 0 0 1px #FFF,2px 4px 5px black;/**Añadimos sombra sobre la sombra, así crea un efecto de borde en el texto**/
+    color: #514e49; /*el color será negro*/
+    text-shadow: 0 0 2px #FFF, 0 0 1px #FFF, 0 0 1px #FFF, 0 0 1px #FFF, 0 0 2px #FFF, 0 0 1px #FFF, 0 0 1px #FFF, 0 0 1px #ffc00b, 0 0 1px #ffc00b, 0 0 1px #ffc00b, 0 0 1px #ffc00b,2px 4px 5px black;/**Añadimos sombra sobre la sombra, así crea un efecto de borde en el texto**/
     font-size: 3.5em; /*el tamaño del texto será fija dependiendo del sistema*/
-    font-family:Montserrat; /*la fuente usada */
+    font-family:Folkard; /*la fuente usada */
     padding-bottom:10px; /*el espacio entre el texto y su límite inferior es fijo*/
     margin-left:20%; /*el espacio entre el borde de la ventana izquierda y el título es relativo */
 }
@@ -96,30 +100,27 @@ h1{
 h2{ 
     color:black; /*el color es negro*/
     font-size:35px; /*el tamaño es fijo*/
-    font-family:Montserrat; /*la fuente usada*/
-    background:rgba(0,0,0,0.3); /*el fondo es semi transparente igual al de la caja de navegación*/
+    font-family:Folkard; /*la fuente usada*/
     text-shadow: 0 0 2px #FFF, 0 0 1px #FFF, 0 0 1px #FFF, 0 0 1px #FFF, 0 0 2px #FFF, 0 0 1px #FFF, 0 0 1px #FFF, 0 0 1px #FFF, 0 0 1px #FFF, 0 0 1px #FFF, 0 0 1px #FFF,2px 4px 5px black;/**Añadimos sombra sobre la sombra, así crea un efecto de borde en el texto**/
-    margin:0; /*la distancia entre la caja con el resto de cajas es 0, para que no haya un espacio entre esté título y la caja de navegación */
-    padding-left:8%; /*el espacio entre borde izquierdo de la caja y el texto será relativo con respecto al tamaño de la ventana */
-    padding-top:20px; /*el espacio entre el borde superior de la caja y el texto es fijo*/
-    padding-bottom:25px; /*el espacio entre el borde inferior de la caja y el texto es fijo*/
-    margin-right:30%; /*el espacio entre el borde izquierdo de la caja con el de la ventana es relativo con respecto al tamaño de la ventana*/
-    margin-left:1.5%;
-    width:90%;
+    margin:auto; /*la distancia entre la caja con el resto de cajas es 0, para que no haya un espacio entre esté título y la caja de navegación */
+}
+
+.cajaSup{
+    padding: 2em;
+    background:rgba(0,0,0,0.3); /*el fondo es semi transparente igual al de la caja de navegación*/
+
 }
 
 /** El fondo de la lista de los botones del menu de navegación**/
 .menunav {
-	margin: 0; /* El margen es igual a 0, para que el fondo se empareje con el del título 1 (h1) */
+	margin: auto; /* El margen es igual a 0, para que el fondo se empareje con el del título 1 (h1) */
+    padding-top:-20px;
+}
+
+.menu{
     background: rgba(0,0,0,0.3); /*La imagen será semi-transparente */
     border-bottom:2px solid white; /*El borde de abajo será blanco */
-    padding-top:-20px;
-    padding-left:8%; /*El espacio entre el contenido del menú y borde de esta caja será del 8%, para que cada vez que la ventana se reduzca el espacio sea relativamente el mismo */
-    margin-right:.5%; /*el espacio entre el borde izquierdo de la caja con el de la ventana es relativo con respecto al tamaño de la ventana*/
-    margin-left:1.5%;
-    
-
-
+    margin: auto;
 }
 
 /** Estilo para cada botón del menu de navegación **/
@@ -270,6 +271,55 @@ header label:hover {
     font-size:1.7em; /*el tamaño de las letras en fijo*/
     font-family:arial; /*la fuente del texto será arial*/
     font-weight: bold; /*las letras serán un poco más gruesas*/
+    height:fit-content;
+    display: inline-block;
+}
+
+.columnaIzq{
+    display:flex;
+    position:static;
+    float: left;
+    padding: 10px;
+    width: 65%;
+}
+
+.columnaDer{
+    display:flex;
+    position:static;
+    float: left;
+    padding: 10px;
+    width: 30%;
+}
+
+.imgConLeyenda{
+    margin: auto;
+    float: left;
+    width: 90%;
+    position:static;
+}
+
+.imgConLeyenda img{
+    margin: auto;
+    width: 100%;
+    height: auto;
+}
+
+.imgConLeyenda p {
+    padding: 15px;
+    text-align: center;
+    font-family:Montserrat;
+    font-size: 16px;
+    margin-top: -15px;
+}
+
+#oscuro{
+    display: none;
+    position:fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.9);
+    color: rgba(0,0,0,0.9);
+    z-index: 28;
 }
 
 /** Códigos de enlaces **/
@@ -580,6 +630,22 @@ td{
         line-height: 1.7; /*la distancia entre cada renglón del texto es un poco más grande*/
         font-size:1.2em; /*el tamaño del texto es más pequeño*/
     }
+
+    .columnaIzq{
+        display:flex;
+        position:static;
+        float: left;
+        padding: 10px;
+        width: 100%;
+    }
+    
+    .columnaDer{
+        display:flex;
+        position:static;
+        float: left;
+        padding: 10px;
+        width: 100%;
+    }
     
 /*imagen utilizada en la página de ubicación*/
     .imagenubicacion{
@@ -592,9 +658,15 @@ td{
 
 /** AQUÍ CAMBIAMOS SOLO LA FORMA DE NAVEGACIÓN, YA QUE AL INTRODUCIR UNA NUEVA PESTAÑA NO HAY ESPACIO PARA ÉSTA AL REDUCIR EL TAMAÑO DE LA VENTANA**/    
     
+/** TITULOS **/
+
+h2{
+    text-align: center;
+}
+
 /** Menú de navegación y cabecera **/
     .menunav {
-        max-width:500px;  /* esto es para que la primera fila tenga máximo dos botones*/
+        /*max-width:500px;  /* esto es para que la primera fila tenga máximo dos botones*/
         background:none;
         border-bottom: none;
     }
@@ -605,9 +677,9 @@ td{
         position: fixed;  /* sostiene la posición aunque se haga scroll en el contenido */
         background: none;
 		z-index: 30; /* para asegurar que el menu esta por encima de todo lo demás*/
-        width: 40%; /* se refiere al ancho del fondo del menu y no a los botones */
+        width: 100vw; /* se refiere al ancho del fondo del menu y no a los botones */
         margin-left: -180%; /* se oculta porque se coloca por fuera de la ventana*/
-		margin-top: -120px;
+        margin-top: -280px;
         transition: all 1s;   /* la animación de desplegar el menu dura 1 segundo*/
         border-bottom: none;
     } 
@@ -616,14 +688,17 @@ td{
     } 
 
     #btn-menu:checked ~ .menu {  /* el checkbox controla las dos posiciones del menu */
-        margin: 1px; 
+        margin: 1px;
+        margin-left: -20px;
+        margin-top: -280px; 
     } 
 .botonMenu {      
 	font-family: Montserrat;  /* fuente seleccionada */
 	font-size: 14px; /*tamaño de la fuente fijo */
 	text-align: center; /*alineación del texto centrado*/
-	width: 500px; /*tamaño de cada botón definido*/
-	background:rgba(0,0,0,0.7); /*fondo de cada botón es semi transparente*/
+    margin: auto;
+	width: 90vw; /*tamaño de cada botón definido*/
+	background:#322824; /*fondo de cada botón es semi transparente*/
     border-radius:0px;/*dejamos las esquinas rectas*/
     border:0px solid white; /*el borde del botón al comienzo será de 0px, es decir, no se verá */
     background-image: none; /*el fondo será el color anterior*/
@@ -643,12 +718,14 @@ td{
 .botonMenu:hover { 
 	text-shadow: 1px 1px #000000; /*se genera una sombra en el texto de color negro*/
     font-weight: bold; /*el texto se vuelve más ancho*/
-	background: rgba(0,0,0,0.9); /*el fondo del botón se pondrá un poco menos transparente*/
+	background: #1c1513; /*el fondo del botón se pondrá un poco menos transparente*/
     border-radius:0px;
     background-image: none; /*el fondo es el color anterior*/
 	cursor:pointer; /*lo mismo de los códigos anteriores*/
     /*con las siguientes lineas de código los bordes superior,izquierdo y derecho se dibujan al pasar el cursor*/
-    border: 2px solid white; 
+    border: 1px solid #faf4ce;
+    box-shadow: #ffc00b 0px 0px 5px; 
+    z-index: 31;
     
     
 }  
@@ -657,7 +734,7 @@ td{
 	font-size: 14px; /*tamaño de la fuente fijo */
 	text-align: center; /*alineación del texto centrado*/
 	width: 500px; /*tamaño de cada botón definido*/
-	background:rgba(0,0,0,0.7); /*fondo de cada botón es semi transparente*/
+	background:#322824; /*fondo de cada botón es semi transparente*/
     border:0px solid white; /*el borde del botón al comienzo será de 0px, es decir, no se verá */
     border-radius:0px;/*dejamos las esquinas rectas*/
     background-image: none; /*el fondo será el color anterior*/
@@ -682,6 +759,7 @@ td{
 	cursor:pointer; /*lo mismo de los códigos anteriores*/
     /*con las siguientes lineas de código los bordes superior,izquierdo y derecho se dibujan al pasar el cursor*/
     border: 2px solid white; 
+    z-index: 10;
     width:500px;/**como en el :hover cuando la pestaña está en tamaño normal convierte el ancho del botón en una cantidad específica, aquí lo cambiamos a 500px (que es el predeterminado en pestañas pequeñas)**/
     
 }      
@@ -694,6 +772,7 @@ td{
 /*Imágenes*/
     .imagenTabla{
         position:relative;
+        margin: auto;
         max-height:200px;
         height:80%; /*La imagen se hace más pequeña*/
     }
