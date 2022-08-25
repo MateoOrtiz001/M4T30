@@ -6,12 +6,13 @@
         <title>M4T30- Página Principal</title><!-- nombramos la página, esto aparecerá en la pestaña del navegador-->
         <link href="style.css" rel="stylesheet" type="text/css">
         <link  rel="icon"   href="favicon.ico" type="image/ico"><!--añadimos el favicon (imagen que aparece en la pestaña de la página)--> 
+        <script  src="script.js"></script>
     </head>
     
     <body>
         <!-- contenido que está fijo arriba a la izquierda-->
-         <img src="forjaz/imagenes/muradin02.png" class="imagen01" alt="imagen de muradin">  
-         <p class="texto01">Imagen para retornar a esta página desde cualquier página</p>
+         <img src="forjaz/imagenes/muradin02.png" onmouseover="textoEnanoIn()" onmouseout="textoEnanoOut()" class="imagen01" alt="imagen de muradin">  
+         <p class="texto01" style="display:none" id="textEnano">Imagen para retornar a esta página desde cualquier página</p>
         <!-- contenido de página-->
         <h1> Páginas de M4T30</h1>
         <br>
@@ -20,7 +21,11 @@
             <p class="parrafoPrincipal">Esta es la página principal, desde acá podrás navegar por todas mis páginas, no olvides que en el respositorio está todo completamente documentado.</p>
         <br>
             <table class="tablaCentral">
-                <tr><td class="celda"><a href="forjaz/index.html"> <img src="imagenes/forjaz.png" class="opacity" width="400px"></a></td></tr>
+                <tr>
+                    <td class="celda"><a href="forjaz/index.html"> <img src="imagenes/forjaz.png" class="opacity" width="400px"></a></td>
+                    <!--<td class="celda"><a href="blog/index.html"><img src="imagenes/blog.png" class="opacity" width="400px"></a></td>
+                    -->
+                </tr>
         
             </table><br>
             <h2>Otros</h2>
@@ -37,18 +42,18 @@
             <p style="text-align: center"><a href="https://www.gametracker.com/player/%7Cz%7CM4T30%7Cz%7C/74.91.114.8:27018/" target="_blank"><img src="http://cache.gametracker.com/player/%7Cz%7CM4T30%7Cz%7C/74.91.114.8:27018/b_560x95.png" alt=""/></a></p>
         </div>
         <br>
-        <div class="barra_inferior">
+        <footer>
             <table>
             <tr>
                 <td>
-                    <div style="margin:auto"><img src="imagenes/enano2.gif" width="200px"></div>
+                    <div style="margin:auto"><img src="imagenes/enano2.gif" width="200px" id="enano"></div>
                 </td>
                 <td>
                     <p class="texto_Inferior">Página creada por Mateo Ortiz</p>
                 </td>
             </tr>      
             </table>  
-        </div>
+        </footer>
     </body>
     
 </html>
