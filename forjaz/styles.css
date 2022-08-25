@@ -609,6 +609,8 @@ td{
     }
     .botonMenu{
         width:100%; /*ajustamos el tamaño a un porcentaje fijo para que los botones no se salgan del menunav*/
+        position: relative;
+        left:-15px
     }
     
     
