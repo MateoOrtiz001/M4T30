@@ -626,7 +626,6 @@ td{
 /** Estilos de párrafos y textos**/
 /*la caja de página cambia*/
     .pagina{ 
-        max-width:500px; /*el tamaño máximo de la caja donde está el título es más pequeño*/
         line-height: 1.7; /*la distancia entre cada renglón del texto es un poco más grande*/
         font-size:1.2em; /*el tamaño del texto es más pequeño*/
     }
