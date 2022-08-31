@@ -60,11 +60,13 @@ function handleComplete(evt,comp) {
     <body onload="init();"><!-- aquí editamos la información que mostrará la página-->
         <h1><a class="titulo01" href="index.html" target="_self">Forjaz: La ciudad bajo la montaña</a>
         </h1><!-- ponemos el título más grande, que es h1-->
+        <div class="cajaSup">
+            <h2>Mapa Interactivo</h2> <!-- ponemos el segundo más grande, que es h2-->
+        </div>
         
-        <h2>Mapa Interactivo</h2> <!-- ponemos el segundo más grande, que es h2-->
          <header><!-- el elemento header incluye el menu desplegable y el ícono que lo despliega -->
             <input type="checkbox" id="btn-menu"><!-- checkbox permite la opción boleana -->
-            <label for="btn-menu"><img src="imagenes/menu.png" width="30px"></label>
+            <label for="btn-menu"><img src="imagenes/menu.png" width="50px"></label>
             <!-- la imagen del ícono se muestra como label del checkbox pero se oculta cuando no se necesita -->
             <nav class="menu">
                <ul class="menunav"> <!-- los botones son elementos de una lista que define el menu pero mantiene el mismo diseño de cada botón, la posición de esta lista depende del estado del checkbox-->
@@ -80,19 +82,21 @@ function handleComplete(evt,comp) {
         </header>
         <a href="../index.html" target="_self"><img src="imagenes/muradin02.png" class="imagen01" alt="imagen de muradin"  ></a><!-- La imagen que está siempre ajustada a la izquierda arriba -->
         
-        <div class="pagina" ><!-- la caja principal en donde se escribe todo el texto-->
+        <div class="pagina" style="width:90% ;" ><!-- la caja principal en donde se escribe todo el texto-->
                 <h3>Mapa de Forjaz Interactivo</h3><!--subtítulo principal-->
-            <!-- cargamos el contenedor de la animacion-->
+                <img src="imagenes/guardia.png" class="imgMapNav" width="400px">
+                <!-- cargamos el contenedor de la animacion-->
             <!-- tiene la clase "cuadroCel01" la cual hará desaparecer el contenido cuando el tamaño de la ventan sea menor a 600px-->
               <div id="animation_container" style="background-color:rgba(255, 255, 255, 0.00); width:750px; height:392px" class="cuadroCel01">
 		      <canvas id="canvas" width="750" height="392" style="position: absolute; display: block; background-color:rgba(255, 255, 255, 0.00);"></canvas>
 		      <div id="dom_overlay_container" class="idCanvas">
 		      </div>
-	       </div>
-            <img src="imagenes/guardia.png" class="imgMapNav" width="400px">
+	       
+            </div>
+            
             
             <!-- cargamos el otro JS, este se activará cuando el tamaño de la ventana sea menor a 600px-->
-            <div class="cuadroCel02" style="width:400px;margin:auto"><img src="imagenes/forjazMapCel.png" width="380px">
+            <div class="cuadroCel02" style="width:90%;margin:auto"><img src="imagenes/forjazMapCel.png" width="380px">
             <table style="font-size: 30px;">
                 <tr>
                     <td><!-- los botones que harán cambiar el texto y la imagen de abajo-->

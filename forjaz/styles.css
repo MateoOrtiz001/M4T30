@@ -11,6 +11,16 @@
     font-family: Folkard;
     src: url('../fonts/folkard.ttf');
 }
+
+@font-face{
+    font-family: Morpheus;
+    src: url('../fonts/MORPHEUS.TTF');
+}
+
+@font-face{
+    font-family: friz;
+    src: url('../fonts/FrizQuadrata.ttf');
+}
 /*** CODIGO DE LOS FONDOS DE LAS DIFERENTES PÁGINAS ***/
 /*Código de la página principal */
 body {                           
@@ -76,7 +86,7 @@ h1{
     color: #514e49; /*el color será negro*/
     text-shadow: 0 0 2px #FFF, 0 0 1px #FFF, 0 0 1px #FFF, 0 0 1px #FFF, 0 0 2px #FFF, 0 0 1px #FFF, 0 0 1px #FFF, 0 0 1px #ffc00b, 0 0 1px #ffc00b, 0 0 1px #ffc00b, 0 0 1px #ffc00b,2px 4px 5px black;/**Añadimos sombra sobre la sombra, así crea un efecto de borde en el texto**/
     font-size: 3.5em; /*el tamaño del texto será fija dependiendo del sistema*/
-    font-family:Folkard; /*la fuente usada */
+    font-family: Morpheus; /*la fuente usada */
     padding-bottom:10px; /*el espacio entre el texto y su límite inferior es fijo*/
     margin-left:20%; /*el espacio entre el borde de la ventana izquierda y el título es relativo */
 }
@@ -99,9 +109,9 @@ h1{
 /**Definimos el subtítulo h2 (el título de cada página) **/
 h2{ 
     color:black; /*el color es negro*/
-    font-size:35px; /*el tamaño es fijo*/
+    font-size:2.5em; /*el tamaño es fijo*/
     font-family:Folkard; /*la fuente usada*/
-    text-shadow: 0 0 2px #FFF, 0 0 1px #FFF, 0 0 1px #FFF, 0 0 1px #FFF, 0 0 2px #FFF, 0 0 1px #FFF, 0 0 1px #FFF, 0 0 1px #FFF, 0 0 1px #FFF, 0 0 1px #FFF, 0 0 1px #FFF,2px 4px 5px black;/**Añadimos sombra sobre la sombra, así crea un efecto de borde en el texto**/
+    text-shadow: 0 0 2px #FFF, 0 0 1px #FFF, 0 0 1px #FFF, 0 0 1px #FFF, 0 0 2px #FFF, 0 0 1px #ffc00b, 0 0 1px #ffc00b, 0 0 1px #ffc00b, 0 0 1px #ffc00b, 0 0 1px #ffc00b, 0 0 1px #ffc00b,2px 4px 5px black;/**Añadimos sombra sobre la sombra, así crea un efecto de borde en el texto**/
     margin:auto; /*la distancia entre la caja con el resto de cajas es 0, para que no haya un espacio entre esté título y la caja de navegación */
 }
 
@@ -269,13 +279,23 @@ header label:hover {
     margin: 10px 4% 2% 4%; /*el espacio entre el borde de la ventana y el borde de está página será proporcional en cuanto la ventana cambie de tamaño*/
     padding: 10px 40px 20px 10px; /*el espacio entre el borde de la página y su contenido es fijo*/
     font-size:1.7em; /*el tamaño de las letras en fijo*/
-    font-family:arial; /*la fuente del texto será arial*/
-    font-weight: bold; /*las letras serán un poco más gruesas*/
+    font-family: friz; /*la fuente del texto será arial*/
+    /*font-weight: bold; /*las letras serán un poco más gruesas*/
     height:fit-content;
     display: inline-block;
 }
 
+
+
 .columnaIzq{
+    display:inline;
+    position:static;
+    float: left;
+    padding: 10px;
+    width: 65%;
+}
+
+.columnaIzqB{
     display:flex;
     position:static;
     float: left;
@@ -291,9 +311,44 @@ header label:hover {
     width: 30%;
 }
 
+.columnaDerB{
+    display: inline;
+    position: static;
+    float:left;
+    width:25%; /*el tamaño del ancho se ajusta al 25%*/
+    font-size:75%; /*el tamaño del texto es un poco más pequeño*/
+    margin: auto;
+}
+
+.imgFija{
+    position: static;
+    float: left;
+    margin: 13px;
+    width: 40%;
+    border: 8px ridge #1b1d20;
+    background-image: url('imagenes/fondocaja2.png');
+}
+
+.imgFija img{
+    width: 100%;
+    margin: auto;
+}
+
+.imgFija p{
+    font-size: 0.8em;
+    text-align: justify;
+    margin: auto;
+    padding: 5px 10px 10px 15px;
+    color: #d8d7d0;
+    font-weight: lighter;
+    text-shadow: black 3px 3px, black 2px 2px, black 0px 2px;
+    font-stretch: expanded;
+}
+
+
 .imgConLeyenda{
     margin: auto;
-    float:inline-start;
+    float:left;
     width: 90%;
     position:static;
 }
@@ -307,8 +362,7 @@ header label:hover {
 .imgConLeyenda p {
     padding: 15px;
     text-align: center;
-    font-family:Montserrat;
-    font-size: 16px;
+    font-size: .8em;
     margin-top: -15px;
 }
 
@@ -330,13 +384,13 @@ a{
 }
 
 a:link { 
-	color: #ffc00b; /*el color del enlace es amarillo */
+	color: #271001; /*el color del enlace es amarillo */
 	text-decoration:none; /*eliminamos la decoración de texto, para que no subraye los vínculos */ 
 }
 
 /*definimos el codigo cuando el cursor esté sobre el enlace*/
 a:hover{ 
-    color:#271001; /*el color cambia lijeramente*/
+    color:#bb900f; /*el color cambia lijeramente*/
     text-decoration: none;
 }
 
@@ -420,9 +474,10 @@ h4{
     max-width:700px;
 }
 
-.imagen03{ 
-    position:relative;
+.imgMap{ 
+    position:static;
     width:70%;
+    margin: auto;
     min-width:250px;
     max-width:800px;
 }
@@ -430,9 +485,9 @@ h4{
 
 .imagenTabla{
     position:relative;
-    min-width:35px;
     max-height:250px;
     height:80%;
+    margin: auto;
     
 }
 
@@ -446,18 +501,19 @@ h4{
 }	
 
 .foto1 {
-    margin-left: 6px;
-	float:left;
+    margin: auto;
     width: 100%;
-    max-width:300px;
-
 }	
+
+.cajaSuperior img{
+    width: 100%;
+    margin: auto;
+}
 
 /*imagen utilizada en la página de ubicación*/
 .imagenubicacion{
-    position:absolute;
-    top:56%;
-    right:15%;
+    position:relative;
+    margin:auto;
     width:80%;
     min-width:100px;
     max-width: 250px;
@@ -483,6 +539,7 @@ h4{
     padding:3%;
     padding-bottom:10px; /*la distancia entre el contenido de la tabla con el borde inferior es de 10px*/
     width:99%; /*el tamaño es casi el mismo al de la caja (código página)*/
+    margin: auto;
 }
 
 /* Codigo de las celdas principales de las tablas*/
@@ -573,15 +630,10 @@ td{
 /*Cuando la pantalla tiene de máximo de 1265px */
 @media only screen and (max-width: 1265px){ 
 /*la imagen de la pagina "ubicacion", de momento está visible, pero más abajo se oculta*/
-    .imagenubicacion{
-        position:absolute;
-        top:86%;
-        right:10%;
-        width:80%;
-        min-width:100px;
-        max-width: 250px;
-        z-index:2;   
-    }   
+.imgMapNav{
+    display:none;
+    
+}
 }
     
 
@@ -618,6 +670,10 @@ td{
         position: relative;
         left:-15px
     }
+
+    .botonMenuMap {      
+        width: 180px; /*tamaño de cada botón definido*/
+    }
     
 /*el título principal cambia*/    
     h1{ 
@@ -645,7 +701,16 @@ td{
         padding: 10px;
         width: 100%;
     }
+
+    .columnaIzqB{
+        width: 100%;
+    }
+
+    .columnaDerB{
+        display: none;
+    }
     
+
     .columnaDer{
         display:flex;
         position:static;
@@ -658,6 +723,25 @@ td{
     .imagenubicacion{
         display:none;/*al ser el tamaño de la pantalla menor a 900px la imagen se oculta */
     }
+
+    .imgFija{
+        position: block;
+        float: left;
+        margin: 20px;
+        width: 80%;
+        border: 8px ridge #1b1d20;
+        background-color: #31333a;
+    }
+    
+    .imgFija img{
+        width: 100%;
+        margin: auto;
+    }
+    
+    .imgFija p{
+        font-size: 0.7em;
+    }
+    
 }
 
 /** CONFIGURACIÓN CUANDO EL TAMAÑO DE LA VENTANA ES MENOR O IGUAL A 750px**/
@@ -667,9 +751,9 @@ td{
     
 /** TITULOS **/
 
-h2{
-    text-align: center;
-}
+    h2{
+        text-align: center;
+    }
 
 /** Menú de navegación y cabecera **/
     .menunav {
@@ -686,7 +770,7 @@ h2{
 		z-index: 30; /* para asegurar que el menu esta por encima de todo lo demás*/
         width: 100vw; /* se refiere al ancho del fondo del menu y no a los botones */
         margin-left: -180%; /* se oculta porque se coloca por fuera de la ventana*/
-        margin-top: -280px;
+        margin-top: -220px;
         transition: all 1s;   /* la animación de desplegar el menu dura 1 segundo*/
         border-bottom: none;
     } 
@@ -697,7 +781,7 @@ h2{
     #btn-menu:checked ~ .menu {  /* el checkbox controla las dos posiciones del menu */
         margin: 1px;
         margin-left: -20px;
-        margin-top: -280px; 
+        margin-top: -220px; 
     } 
 .botonMenu {      
 	font-family: Montserrat;  /* fuente seleccionada */
@@ -781,7 +865,7 @@ h2{
 /** Estilos de párrafos y textos**/
 /*Imágenes*/
     .imagenTabla{
-        position:relative;
+        position:static;
         margin: auto;
         max-height:200px;
         height:80%; /*La imagen se hace más pequeña*/
@@ -795,9 +879,7 @@ h2{
         height: 60px;
     }
     .foto1 {
-	    margin-left: 3px;
-        margin-bottom: 3px;
-	    float:left;
+	    margin: auto;
         width: 100%;
     }
 
@@ -808,6 +890,10 @@ h2{
     
 /** Contenido de cajas**/
 /*La caja derecha se oculta*/
+
+    th{
+        font-size: 1.4em;
+    }
     .cajaDerecha{
         display:none;
         content:none;
@@ -868,4 +954,6 @@ h2{
         border:2px solid black;
 	    width:99%;
     }
+
+
 }
