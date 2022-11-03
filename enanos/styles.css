@@ -1,0 +1,454 @@
+
+/***********************************/
+/** CARGA DE FUENTES TIPOGRÁFICAS **/
+/***********************************/
+
+/* Montserrat*/
+@font-face{
+    font-family: montserrat;
+    src: url('../fonts/Montserrat-Regular.ttf'), url('../fonts/Montserrat-Bold.ttf');
+}
+
+
+/*******************************/
+/*** Organización del cuerpo ***/
+/*******************************/
+/* Cuerpo */
+body{
+    background-image: url("images/fondo.png");
+    background-color: #2F2A43;
+    background-repeat: repeat;
+    background-attachment: fixed;
+    margin: 5px;
+}
+
+/* Cabecera */
+header{
+    background-color: #6d4a3c;
+    background-image: url("images/fondo03.jpg");
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    margin: 15px;
+    height: 250px;
+}
+
+header h1{
+    margin: auto;
+    width: auto;
+    height: 110px;
+    padding-top: 55px;
+    text-align: center;
+    text-shadow: #101010 1px 2px 2px;
+    text-justify: center;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+nav.menu{
+    width: 100%;
+    position: relative;
+    bottom: 0px;
+}
+
+.menu ul{
+    margin:auto; 
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.menu li{
+    height: 70px;
+    width: 250px;
+    margin-left: 5px;
+    font-size: 14px;
+	text-align: center;
+    text-decoration: none;  /* eliminamos decoración cualquiera que pueda tener el texto */
+    transition: all 0.4s ease-in-out;
+    align-self: center;
+    border: 0px solid transparent;
+} 
+
+.menu li:hover{
+    background-color: rgba(109, 74, 60, 0.8);
+    border-bottom: 5px solid #6d4a3c;
+}
+
+.menu li:focus{
+    border-bottom: 5px solid #6d4a3c;
+}
+
+.botonMenu{
+    border: none;
+    width: 250px;
+    background-color: rgba( 0, 0, 0, 0.6);
+    height: 70px;
+    color: white;
+    font-size: 1.2em;
+    font-family: Montserrat,Arial, Helvetica, sans-serif;
+    cursor: pointer;
+}
+
+
+/* Pie de Página */
+
+article::after{
+    content: "";
+    display: block;
+    height: 150px;
+}
+
+footer{
+    background-color: #2a3a2a;
+    width: 100vw;
+    height: 150px;
+    margin: -5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    
+}
+
+footer div{
+    padding: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 180%;
+    height: auto;
+    text-align: center;
+    align-self: center;
+}
+
+footer div a{
+    color: #dfdfdf;
+}
+
+/* Central */
+article{
+    display: flex;
+    justify-content: space-between;
+    width: 95vw;
+    margin: 5px auto 25px;
+    min-height: 100vh;
+}
+
+div.centrado{
+    flex-grow: 7;
+    height: auto;
+    padding: 5px;
+    width: 69%;
+}
+
+div.columnaDerecha{
+    flex-grow: 3;
+    height: auto;
+    width: 28%;
+}
+
+div.caja{
+    margin: 2px auto;
+    border: 2px solid #6d4a3c;
+    border-radius: 4px;
+    padding: 5px;
+    width: 95%;
+    background-color: rgba( 256, 256, 256, 0.83);
+    overflow: auto;
+}
+
+div.cajaDerecha{
+    margin:5px auto;
+    border: 2px solid #044e20;
+    background-color: white;
+    padding: 5px;
+    width: 98%;
+}
+
+/**************/
+/*** Textos ***/
+/**************/
+
+p{
+    font-family: Arial, Helvetica, sans-serif;
+    color: #101010;
+}
+
+h2{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 2em;
+}
+
+h2.centrado{
+    text-align: center;
+}
+
+h3{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.4em;
+    border-bottom: 2px solid red;
+}
+
+.cajaDerecha h2{
+    font-size: 1.6em;
+}
+
+p.textoA{
+    font-size: 1.2em;
+    font-weight: 600;
+    text-shadow: #FFF 2px 2px 1px;
+}
+
+p input{
+    width: 50px;
+    border: 1px solid gray;
+    border-radius: 3px;
+}
+
+p input:focus{
+    border: #101010;
+}
+
+button.boton01{
+    border-radius: 2px;
+    padding: 4px;
+    border: 1px solid gray;
+}
+
+/* Listas */
+
+li{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+li img{
+    width: 40px;
+    height: auto;
+    position: relative;
+    top: 15px;
+}
+
+
+
+/* Pagina Principal */ 
+
+img.der{
+    position: relative;
+    width: 90%;
+    height: auto;
+    margin: 15px 0 10px 15px;
+}
+
+
+div.slider {
+    width: 80%;
+    margin: 0 auto 20px;
+}
+
+
+.slider .photos {
+    position: relative;
+    height: 325px;
+
+}
+
+.slider .photos img {
+    width: 100%;
+    min-height: 300px;
+    height: auto;
+    max-height: 325px;
+    position: absolute;
+    left: 0;
+    transition: opacity 1s;
+    border: 5px solid #1F1F1F;
+    border-radius: 5px;
+}
+
+/*
+.slider .photos img.shown {
+    opacity: 1;
+  }
+      
+*/
+
+.prev:before,
+.next:before {
+  color: #fff;
+  font-size: 65px;
+  position: absolute;
+  top: 45%;
+  cursor: pointer;
+}
+
+.prev:before {
+  content: '<';
+  left: 0;
+}
+
+.next:before {
+  content: '>';
+  right: 0;
+}
+
+
+#infoDiv{
+    display:none;
+    margin: auto;
+    background: #ccc;
+    width: 80%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#infoMcm{
+    display:none;
+    margin: auto;
+    background: #ccc;
+    width: 80%;
+
+}
+
+#infoMcd{
+    display:none;
+    margin: auto;
+    background: #ccc;
+    width: 80%;
+
+}
+
+/** Tablas **/
+.tabla1{
+    width: 70%;
+    margin: 2px auto 10px;
+    border-collapse: collapse;
+    border: 2px solid #414141;
+}
+
+.tabla1 th{
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.5em;
+    padding: 2px;
+}
+
+.tabla1 td{
+    font-family: Arial, Helvetica, sans-serif;
+    border: 1px solid #313131;
+    padding: 5px;
+    width: 50%;
+}
+
+td.bold{
+    font-weight: bold;
+}
+td.center{
+    text-align: center;
+}
+
+.cajaDerecha table{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.cajaDerecha td{
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 5px;
+    border: 1px solid #818181;
+}
+
+td li{
+    margin-left: -15px;
+}
+
+/** Imagenes y figuras **/
+
+figure{
+    position: relative;
+    float: right;
+    width: 250px;
+    height: 200px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+figure img{
+    width: 250px;
+    position: inherit;
+}
+
+div.galeria{
+    width: 95%;
+    clear: both;
+    margin: auto;
+}
+
+.image{
+    width: 250px;
+    position: static;
+    height: auto;
+    float: left;
+    margin: 2px 5px 5px;
+}
+
+.image img{
+    width: 100%;
+    height: auto;
+}
+
+/** TELEFONO CELULAR */
+@media only screen and (max-width:640px) { 
+
+
+    article{
+        flex-direction: column;
+    }
+
+    div.centrado{
+        flex-grow: 1;
+        height: auto;
+        width: 100%;
+    }
+    
+    div.columnaDerecha{
+        flex-grow: 1;
+        height: auto;
+        width: 100%;
+    }
+
+    /*.menu ul{
+        flex-direction: column;
+    }*/
+
+    .menu li{
+        width: 30%;
+    }
+
+    .botonMenu{
+        width: 100%;
+    }
+
+    .slider .photos {
+        height: 250px;
+    
+    }
+    
+    .slider .photos img {
+        width: 100%;
+        min-height: 250px;
+    }
+
+    figure{
+        width: 80%;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    
+    figure img{
+        width: 100%;
+        position: inherit;
+    }
+
+    .image{
+        width: 90%;
+        position: static;
+        height: auto;
+        float:none;
+        margin: 10px auto;
+    }
+}
