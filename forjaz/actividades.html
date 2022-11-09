@@ -1,8 +1,8 @@
 <!doctype html> <!-- Identificamos el archivo como un documento html-->
-<html>
+<html lang="es">
     <head><!-- aquí editamos la información sobre el documento-->
         <meta charset="UTF-8"><!-- codificamos el archivo con UTF-8, para pode usar la "ñ" y tildes-->
-        <meta lang="es"><!-- especificamos que el archivo está en español-->
+        <meta name="viewport" content="width=device-width; initial-scale=1.0">
         <title>Forjaz - Actividades y Eventos</title><!-- nombramos la página, esto aparecerá en la pestaña del navegador-->
         <link href="styles.css" rel="stylesheet" type="text/css">
         <link  rel="icon"   href="imagenes/favicon2.ico" type="image/ico"><!--añadimos el favicon (imagen que aparece en la pestaña de la página)-->
@@ -10,10 +10,13 @@
     </head>
     <body class="body4"><!-- aquí editamos la información que mostrará la página--><a name="inicio"></a><!--llamamos esta parte "inicio" para referenciar el enlace del final de la página-->
         <h1><a class="titulo01" href="index.html" target="_self">Forjaz: La ciudad bajo la montaña</a></h1><!-- ponemos el título más grande, que es h1-->
-        <h2>Actividades y Eventos</h2> <!-- ponemos el segundo más grande, que es h2-->
+        <div class="cajaSup">
+            <h2>Actividades y Eventos</h2> <!-- ponemos el segundo más grande, que es h2-->
+        </div>
+        
          <header><!-- el elemento header incluye el menu desplegable y el ícono que lo despliega -->
             <input type="checkbox" id="btn-menu"><!-- checkbox permite la opción boleana -->
-            <label for="btn-menu"><img src="imagenes/menu.png" width="30px"></label>
+            <label for="btn-menu"><img src="imagenes/menu.png" width="50px"></label>
             <!-- la imagen del ícono se muestra como label del checkbox pero se oculta cuando no se necesita -->
             <nav class="menu">
                <ul class="menunav"> <!-- los botones son elementos de una lista que define el menu pero mantiene el mismo diseño de cada botón, la posición de esta lista depende del estado del checkbox-->
@@ -30,10 +33,16 @@
         <a href="../index.html" target="_self"><img src="imagenes/muradin02.png" class="imagen01" alt="imagen de muradin"  ></a>
  
         <div class="pagina">
-            <p class="izquierda">Entre las actividades realizadas en Forjaz encontramos eventos culturales o actividades comunes.
-               </p>
+            <div class="columnaUnica">
+                <p>
+                    <img src="" style="float: right;">
+                    Entre las actividades realizadas en Forjaz encontramos 
+                    eventos culturales o actividades comunes.
+                </p>
+            </div>
+            
             <table class="tablaContenidos"><!-- creamos una tabla donde se pueda desplazar más rápido entre contenidos de la página-->
-                <tr class="trContenidos"><th class="thContenidos">Contenidos</th></tr>
+                <tr class="trContenidos"><th>Contenidos</th></tr>
                 <tr class="trContenidos"><td><a href="#eventos">Eventos Culturales</a></td></tr>
                 <tr class="trContenidos"><td><a href="#actividades">Actividades Comunes</a></td></tr>     <!-- cada enlace lleva a cada sección de la página-->          
                 

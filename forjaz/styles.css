@@ -285,7 +285,14 @@ header label:hover {
     display: inline-block;
 }
 
-
+.columnaUnica{
+    display:block;
+    position: static;
+    float: left;
+    padding:10px;
+    width: 95%;
+    margin: auto;
+}
 
 .columnaIzq{
     display:inline;
@@ -384,13 +391,13 @@ a{
 }
 
 a:link { 
-	color: #271001; /*el color del enlace es amarillo */
+	color: #e6d11a; /*el color del enlace es amarillo */
 	text-decoration:none; /*eliminamos la decoración de texto, para que no subraye los vínculos */ 
 }
 
 /*definimos el codigo cuando el cursor esté sobre el enlace*/
 a:hover{ 
-    color:#bb900f; /*el color cambia lijeramente*/
+    color:#b48e19; /*el color cambia lijeramente*/
     text-decoration: none;
 }
 
@@ -472,6 +479,11 @@ h4{
     width:70%;
     min-width:100px;
     max-width:700px;
+}
+
+.imagen03{
+    width: 700px;
+    height: auto;
 }
 
 .imgMap{ 
@@ -567,18 +579,21 @@ td{
 
 /** Los codigos de la tabla de "Contenidos"*/
 .tablaContenidos{
-    border:2px solid white;
+    border:6px ridge #1b1d20;
     padding:0.6em;
     font-size:66%; /*el tamaño de la fuente es más pequeña aún */
     margin-left:20px; /*movemos un poco a la derecha la caja */
+    background-image: url('imagenes/fondocaja2.png');
 }
 
 /*El codigo de las celdas principales en la tabla "Contenidos"*/
-.thContenidos{
+.trContenidos th{
     background:none; /*quitamos el fondo que tiene el codigo th principal*/
     font-weight: bold;
     text-align:Center; /*alineamos el texto al centro*/
-    font-size:100%;
+    font-size:1.4em;
+    color: #d8d7d0;
+    text-shadow: black 3px 3px, black 2px 2px, black 0px 2px;
 }
 
 /*El codigo de las filas en la tabla "Contenidos"*/
@@ -586,6 +601,7 @@ td{
     background:none; /*quitamos el fondo que tiene el codigo tr pincipal*/
     padding:0.5em;
     text-align:left; /*el texto se alinea a la izquierda*/
+    text-shadow: black 2px 2px, black 1px 1px, black 0px 1px;
 }
 
 .ficha{
@@ -611,6 +627,61 @@ td{
 .cuadroCel02{
     display:none;
 }
+
+/** GALERIA **/
+
+#cGaleria{
+    width:80%;
+    margin: auto;
+    margin-top:-70px ;
+}
+
+#cGaleria div{
+    border: 7px ridge #1b1d20;
+    background: black;
+    border-radius: 2px;
+    padding: 2px;
+    padding-bottom: 0px;
+    padding-top: -100px;
+    margin: auto;
+    width: 100%;
+}
+
+#cGImg{
+    width: 100%;
+    margin: auto;
+}
+
+.btnGaleria{
+    background-color: #1b1d20;
+    color:white;
+    padding:5px;
+    position:relative;
+    z-index:2;
+    top:45ex;
+    width: 20px;
+    height: 100px;
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+.btnGaleria:hover{
+    background-color: #1c1513;
+}
+
+#cGBtnDer{
+    left:100%;
+    margin-left: -10px;
+    border-radius: 0px 5px 5px 0px;
+
+}
+
+#cGBtnIzq{
+    margin-left: -10px;
+    border-radius: 5px 0px 0px 5px;
+}
+
+
 /** CODIGO ESPECIAL PARA CAJAS OCULTAS**/
 /* Cuando la pantalla es más grande de 601px */
 @media only screen and (min-width: 601px){ 
@@ -640,13 +711,27 @@ td{
 
 @media only screen and (max-width:1050px){
     .imgMapNav{
-    display:none;
-    
-}
+        display:none;
+    }
+
+    .btnGaleria{
+        background-color: #1b1d20;
+        color:white;
+        padding:5px;
+        position:relative;
+        z-index:2;
+        top:40ex;
+        width: 20px;
+        height: 100px;
+        border: 1px solid black;
+        cursor: pointer;
+    }
+
+
 }
 
 /** CONFIGURACIÓN CUANDO EL TAMAÑO DE LA VENTANA ES MENOR O IGUAL A 900px**/
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 920px) {
     
 /** Menú de navegación y cabecera **/
 /*modificamos los parámetros de la caja de navegación*/ 
@@ -742,6 +827,19 @@ td{
         font-size: 0.7em;
     }
     
+    .btnGaleria{
+        background-color: #1b1d20;
+        color:white;
+        padding:5px;
+        position:relative;
+        z-index:2;
+        top:32ex;
+        width: 20px;
+        height: 100px;
+        border: 1px solid black;
+        cursor: pointer;
+    }
+
 }
 
 /** CONFIGURACIÓN CUANDO EL TAMAÑO DE LA VENTANA ES MENOR O IGUAL A 750px**/
@@ -956,4 +1054,36 @@ td{
     }
 
 
+/* Galeria de la pagina Personajes */
+
+    .btnGaleria{
+        background-color: #1b1d20;
+        color:white;
+        padding:5px;
+        position:relative;
+        z-index:2;
+        top:21ex;
+        width: 20px;
+        height: 100px;
+        border: 1px solid black;
+        cursor: pointer;
+    }
+
+}
+
+@media only screen and (max-width:450px){
+    /* Galeria de la pagina Personajes */
+
+    .btnGaleria{
+        background-color: #1b1d20;
+        color:white;
+        padding:5px;
+        position:relative;
+        z-index:2;
+        top:18ex;
+        width: 20px;
+        height: 100px;
+        border: 1px solid black;
+        cursor: pointer;
+    }
 }

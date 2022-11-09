@@ -1,13 +1,13 @@
 <!doctype html> <!-- Identificamos el archivo como un documento html-->
-<html>
+<html lang="es">
     <head><!-- aquí editamos la información sobre el documento-->
         <meta charset="UTF-8"><!-- codificamos el archivo con UTF-8, para pode usar la "ñ" y tildes-->
-        <meta lang="es"><!-- especificamos que el archivo está en español-->
-	<meta name="viewport" content="width=device-width; initial-scale=1.0">
+	    <meta name="viewport" content="width=device-width; initial-scale=1.0">
         <title>Forjaz - Personajes Destacados</title><!-- nombramos la página, esto aparecerá en la pestaña del navegador-->
         <link href="styles.css" rel="stylesheet" type="text/css">
         <link  rel="icon"   href="imagenes/favicon2.ico" type="image/ico"><!--añadimos el favicon (imagen que aparece en la pestaña de la página)-->
-    
+        <script  src="scripts.js"></script>
+
     </head>
     <body class="body3"><!-- aquí editamos la información que mostrará la página-->
         <h1><a class="titulo01" href="index.html" target="_self">Forjaz: La ciudad bajo la montaña</a></h1><!-- ponemos el título más grande, que es h1-->
@@ -71,6 +71,7 @@
                 <td class="izquierda">Líder del clan Hierro negro, hija del antiguo rey Magni, esposa del antiguo líder del clan Hierro negro Dagran Thaurissan. Después de ser secuestrada por el clan Hierronegro, lugar donde le fue mostrado ese respeto que su padre no le tenía a la hora de tomar el trono del rey, regresaría a Forjaz a reclamar el trono después de la maldición de Magni, así pasó a ser parte del concilio en representación del clan Hierro Negro. <a href="https://wow.gamepedia.com/Moira_Thaurissan" target="_blank">Más Información</a></td>
                 <td class="cajaDerecha"><p align="center"><img src="imagenes/moira.jpg" class="imagenTabla" alt="Moira Thaurissan"></p> </td>
                 </tr></table>
+
             <table  class="tablauno">
                 <tr><th colspan="2">Falsad Martillosalvaje </th>
                 </tr>
@@ -81,6 +82,20 @@
             </tr>
                 <tr class="tr2"><!--esta celda ocupa espacio de dos celdas, como las celdas principales--><td colspan="2">Puedes leer más sobre la historia del concilio <a href="historia.html#martillos" target="_blank">aquí</a><!--enlace a la sección "La Guerra de los tres martillos" de la página de "Historia"-->  </td></tr>
             </table>
+            <br>
+
+            <h3> Habitantes de Forjaz </h3>
+            <p>
+                En la siguiente galeria de fotos puede ver 
+                distintos habitantes de la ciudad.
+            </p>
+            <div id="cGaleria">
+                <button class="btnGaleria" id="cGBtnIzq" onclick="atrasGaleria()"> </button>
+                <button class="btnGaleria" id="cGBtnDer" onclick="adelanteGaleria()"> </button>
+                <div>
+                    <img id="cGImg" src="imagenes/cGaleriaImgs/01.jpg">
+                </div>
+            </div>
         
         </div>
     </body>
