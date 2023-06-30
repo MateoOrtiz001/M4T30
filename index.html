@@ -1,8 +1,8 @@
 <!doctype html>
-<html>
+<html lang="es">
     <head>
         <meta charset="UTF-8"><!-- codificamos el archivo con UTF-8, para pode usar la "ñ" y tildes-->
-        <meta lang="es"><!-- especificamos que el archivo está en español-->
+        <meta name="viewport" content="width=device-width; initial-scale=1.0">
         <title>M4T30- Página Principal</title><!-- nombramos la página, esto aparecerá en la pestaña del navegador-->
         <link href="style.css" rel="stylesheet" type="text/css">
         <link  rel="icon"   href="favicon.ico" type="image/ico"><!--añadimos el favicon (imagen que aparece en la pestaña de la página)--> 
@@ -17,17 +17,22 @@
         <h1> Páginas de M4T30</h1>
         <br>
         <div class="pagina">
+        <div class="capaSup">          
             <h2>Contenido</h2><br>
-            <p class="parrafoPrincipal">Esta es la página principal, desde acá podrás navegar por todas mis páginas, no olvides que en el respositorio está todo completamente documentado.</p>
+            <p>
+                Esta es la página principal, 
+                desde acá podrás navegar por todas mis páginas.
+            </p>
         <br>
-            <table class="tablaCentral">
-                <tr>
-                    <td class="celda"><a href="forjaz/index.html"> <img src="imagenes/forjaz.png" class="opacity" width="400px"></a></td>
-                    <!--<td class="celda"><a href="blog/index.html"><img src="imagenes/blog.png" class="opacity" width="400px"></a></td>
-                    -->
-                </tr>
-        
-            </table><br>
+            <div class="contenidoCentral">
+                <a target="_self" href="forjaz/index.html"> 
+                    <img src="imagenes/forjaz.png"class="opacity">
+                </a>
+                <a target="_self" href="blog/index.html">
+                    <img src="imagenes/blog.png"class="opacity">
+                </a>
+            </div>
+            <br>
             <h2>Otros</h2>
             <br>
             <table style="margin:auto">
@@ -39,7 +44,8 @@
                 </tr>
             
             </table>
-            <p style="text-align: center"><a href="https://www.gametracker.com/player/%7Cz%7CM4T30%7Cz%7C/74.91.114.8:27018/" target="_blank"><img src="http://cache.gametracker.com/player/%7Cz%7CM4T30%7Cz%7C/74.91.114.8:27018/b_560x95.png" alt=""/></a></p>
+            <br />
+        </div>
         </div>
         <br>
         <footer>
