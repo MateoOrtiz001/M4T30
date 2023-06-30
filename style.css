@@ -281,6 +281,10 @@ h2{
     box-shadow:none;
     color:white;
 }
+
+.capaSup:hover{
+    background:none;
+}
 .capaSup h2 {
     color: white;
     border-bottom: 1px solid white;
