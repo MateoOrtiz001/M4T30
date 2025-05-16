@@ -1,44 +1,57 @@
 <!doctype html>
-<html>
+<html lang="es">
     <head>
         <meta charset="UTF-8"><!-- codificamos el archivo con UTF-8, para pode usar la "ñ" y tildes-->
-        <meta lang="es"><!-- especificamos que el archivo está en español-->
+        <meta name="viewport" content="width=device-width; initial-scale=1.0">
         <title>M4T30- Página Principal</title><!-- nombramos la página, esto aparecerá en la pestaña del navegador-->
         <link href="style.css" rel="stylesheet" type="text/css">
         <link  rel="icon"   href="favicon.ico" type="image/ico"><!--añadimos el favicon (imagen que aparece en la pestaña de la página)--> 
+        <script  src="script.js"></script>
     </head>
     
     <body>
         <!-- contenido que está fijo arriba a la izquierda-->
-         <img src="forjaz/imagenes/muradin02.png" class="imagen01" alt="imagen de muradin">  
-         <p class="texto01">Imagen para retornar a esta página desde cualquier página</p>
+         <img src="forjaz/imagenes/muradin02.png" onmouseover="textoEnanoIn()" onmouseout="textoEnanoOut()" class="imagen01" alt="imagen de muradin">  
+         <p class="texto01" style="display:none" id="textEnano">Imagen para retornar a esta página desde cualquier página</p>
         <!-- contenido de página-->
         <h1> Páginas de M4T30</h1>
         <br>
         <div class="pagina">
+        <div class="capaSup">          
             <h2>Contenido</h2><br>
-            <p class="parrafoPrincipal">Esta es la página principal, desde acá podrás navegar por todas mis páginas, no olvides que en el respositorio está todo completamente documentado.</p>
+            <p>
+                Esta es la página principal, 
+                desde acá podrás navegar por todas mis páginas.
+            </p>
         <br>
-            <table class="tablaCentral">
-                <tr><td class="celda"><a href="forjaz/forjaz.html"> <img src="imagenes/forjaz.png" class="opacity" width="400px"></a></td></tr>
-        
-            </table><br>
+            <div class="contenidoCentral">
+                <a target="_self" href="forjaz/index.html"> 
+                    <img src="imagenes/forjaz.png"class="opacity">
+                </a>
+                <a target="_self" href="blog/index.html">
+                    <img src="imagenes/blog2.png"class="opacity">
+                </a>
+            </div>
+            <br>
             <h2>Otros</h2>
             <br>
             <table style="margin:auto">
-                <tr>
+                <tr>    
                     <td><a href="https://www.facebook.com/tiozitro777" target="_blank"><img src="imagenes/logoFacebook.png" width="75px" ></a></td>
                     <td><a href="https://twitter.com/ZitroMateo666" target="_blank"><img src="imagenes/logoTwitter.png" width="75px" ></a></td>
                     <td><a href="https://www.youtube.com/channel/UClP_Lmn7-I25jTA0-kM3m_w" target="_blank"><img src="imagenes/logoYoutube.png" width="75px" ></a></td>
+                    <td><a href="https://comunidad.fandom.com/wiki/Usuario:Zitromateo" target="_blank"><img src="imagenes/logoFandom.png" width="75px"></a></td>
                 </tr>
             
             </table>
-            <p style="text-align: center"><a href="https://www.gametracker.com/player/%7Cz%7CM4T30%7Cz%7C/74.91.114.8:27018/" target="_blank"><img src="http://cache.gametracker.com/player/%7Cz%7CM4T30%7Cz%7C/74.91.114.8:27018/b_560x95.png" alt=""/></a></p>
+            <br />
+        </div>
         </div>
         <br>
-        <div class="barra_inferior">
-            <div style="margin:auto"><img src="imagenes/enano2.gif" width="200px"></div>
-        </div>
+        <footer>
+            <img src="imagenes/enano1.gif" width="250px">
+            <p class="texto_Inferior">Página creada por Mateo Ortiz</p>
+        </footer>
     </body>
     
 </html>
