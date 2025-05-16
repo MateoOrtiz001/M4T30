@@ -1,0 +1,778 @@
+@charset "UTF-8";
+
+/*Seleccionamos una fuente para varios estilos*/
+@font-face {
+    font-family: Montserrat;
+    src: url('../../fonts/Montserrat-Regular.ttf'),url('../../fonts/Montserrat-Bold.ttf'),url('../../fonts/Montserrat-BoldItalic.ttf'),url('../../fonts/Montserrat-Italic.ttf');
+}
+@font-face{
+    font-family: Jost;
+    src: url('../../fonts/Jost-Regular.ttf'),url('../../fonts/Jost-Italic.ttf'),url('../../fonts/Jost-Bold.ttf'),url('../../fonts/Jost-BoldItalic.ttf'),url('../../fonts/Jost-SemiBold.ttf');
+}
+@font-face{
+    font-family: AncizarSerif;
+    src: url('../../fonts/AncizarSerif/AncizarSerif-Regular.otf'),url('../../fonts/AncizarSerif/AncizarSerif-Bold.otf'),url('../../fonts/AncizarSerif/AncizarSerif-BoldItalic.otf'),url('../../fonts/AncizarSerif/AncizarSerif-Light.otf'),url('../../fonts/AncizarSerif/AncizarSerif-LightItalic.otf'),ur('../../fonts/AncizarSerif/AncizarSerif-Italic.otf');
+}
+@font-face{
+    font-family: Ancizar;
+    src: url('../../fonts/AncizarSans/AncizarSans-Regular.otf'),url('../../fonts/AncizarSans/AncizarSans-Bold.otf'),url('../../fonts/AncizarSans/AncizarSans-BoldItalic.otf'),url('../../fonts/AncizarSans/AncizarSans-Light.otf'),url('../../fonts/AncizarSans/AncizarSans-LightItalic.otf'),ur('../../fonts/AncizarSans/AncizarSans-Italic.otf');
+}
+
+/*** CODIGO DE LOS FONDOS DE LAS DIFERENTES PÁGINAS ***/
+/*Código de la página principal */
+body {                           
+	background-color:white;  /** El fondo de la página en carga es blanco*/                  
+	background-image: url("../imagenes/fondo2.jpg"); /*El fondo de la página será la imagen indicada */
+    background-repeat:repeat;  /*el fondo se repetirá (no debería ser el caso por el código siguiente)*/
+    background-size:auto; /*el tamaño de la imagen se adaptará al tamaño de la ventana*/
+    background-attachment: fixed; /*El fondo de la página se mantendrá quieto mientras se desplaza con el scroll*/
+}
+
+/*** CODIGO GENERAL***/
+/**Cuerpo de página (Estructuras) **/
+.cuerpo{
+    background-color: rgba(256,256,256,0.15);
+    height:fit-content;
+    display: flex;
+    overflow: auto;
+}
+
+.paginacentral {   
+    float: left;
+    width: 65%;
+    position: static;
+    padding-left:5px;
+    display:flexbox;
+    color:white;
+  }
+
+.columnaLateral {
+    width: 26%;
+    padding-left: 15px;
+    padding-bottom: 25px;
+    margin-left:15px;
+    position: static;
+    display:flexbox;
+  }
+
+.cardLateral {
+    background-color: white;
+    padding-left: 20px;
+    padding-right:20px;
+    padding-bottom:30px;
+    margin-top: 20px;
+    margin-left: 40px;
+    border:2px solid rgb(168, 168, 168);
+
+}
+
+.card01 {
+    padding: 20px;
+    margin-top: 20px;
+    margin-left:20px;
+}
+
+article{
+    margin:0 0 -100px 0;
+    
+}
+
+article::after{
+    content: "";
+    display: block;
+    height: 150px;
+}
+
+.contenedorB{
+    width:85%;
+    margin:auto;
+
+}
+
+footer{
+    background-color: #1f1f1f;
+    width: 100vw;
+    height: 150px;
+    margin: -5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    
+}
+
+footer div{
+    padding: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 180%;
+    height: auto;
+    text-align: center;
+    align-self: center;
+}
+
+footer div a{
+    color: #dfdfdf;
+}
+
+/**Títulos**/
+h1{
+    font-family: Ancizar;
+    font-size: 50px;
+    font-weight: bold;
+}
+
+h2{
+    font-family:Jost;
+    font-size:2.5em;
+    font-weight: bold;
+}
+
+h3{
+    font-family:Jost;
+    font-size:1.7em;
+    font-weight: bold;
+    border-bottom: 2px solid green;
+}
+
+h4{
+    font-family: Jost;
+    font-size:1.3em;
+    font-weight: semiBold;
+}
+
+/**Textos**/
+
+p{
+    font-family:serif;
+}
+
+
+.textoCentral{
+    font-family: Montserrat;
+    font-size: 18px;
+
+}
+
+.textoCentral a{
+    color:#3EDC8C;
+}
+
+.textoCentral a :hover{
+    color: #2a8f72;
+}
+
+.textoLateral{
+    font-family: Montserrat;
+
+}
+
+.cardLateral p{
+    font-size: 14px;
+
+}
+
+
+
+/* BARRA DE NAVEGACION*/
+.textoNav{
+    color:white;
+    font-family:Montserrat;
+    font-size:16px;
+    width: 15%;
+    position: static;
+    float:left;
+    margin-left:3em;
+    margin-top:20px;
+    
+}
+
+.tablaNav{
+    width:500px; /*Le establecemos un ancho*/
+    margin:0 auto; /*Centramos automaticamente*/
+    padding-left: 20px;
+    position: static;
+    float:right;
+    margin-top:10px;
+}
+
+.tablaNav td{
+    color:White;
+    font-family: Montserrat;
+    font-weight: bold;
+    font-size:14px;
+}
+
+.enlaceNav {
+    color:white;
+    text-decoration: none;
+    float:left;
+}
+
+.enlaceNav:link{
+    color:white;
+    text-decoration: none;
+}
+
+.enlaceNav:hover{
+    color:#7ac49f;
+    text-decoration: none;
+}
+
+* {
+    margin:0px;
+    padding:0px;
+}
+
+#header {
+    margin:auto;
+    font-family:Montserrat;
+}
+
+ul, ol {
+    list-style:none;
+}
+
+.tablaNav > li {
+    color:White;
+    font-family: Montserrat;
+    font-weight: bold;
+    font-size:14px;
+    float:left;
+    padding-left: 15px;
+}
+
+.tablaNav li a {
+    color:white;
+    text-decoration: none;
+    padding-left: 10px;
+    padding-right:10px;
+}
+
+.tablaNav li a:link{
+    color:white;
+    text-decoration: none;
+}
+
+.tablaNav li a:hover {
+    color:#7ac49f;
+    text-decoration: none;
+    transition-duration: 0.5s;
+}
+
+.tablaNav li ul {
+    display:none;
+    position:absolute;
+    min-width:140px;
+    padding-top: 10px;
+    
+}
+
+.tablaNav li:hover > ul {
+    display:block;
+    transition-duration: 0.5s;
+}
+
+.tablaNav li ul li {
+    position:relative;
+    padding-top: 10px;
+    padding-bottom: 15px;
+    background:#2C2C2C;
+}
+
+.tablaNav li ul li ul {
+    right:-140px;
+    top:0px;
+}
+
+/*Otros*/
+
+#tituloPrincipal{
+    position:relative;
+    width: 75%;
+    left:5%;
+    top:20px;
+    vertical-align: middle;
+    display:flex;
+}
+
+#tituloPrincipal h1{
+    padding-top: 40px;
+}
+
+/**Código cajas (divs)**/
+
+.cabecera {
+    position: static;
+    background: rgba(50,155,83,0.8);
+    height: 200px;
+    padding: 5px;
+}
+
+    #cajaNavegacion h2 {
+        color: black;
+        text-align: center;
+        border-bottom: 2px solid rgb(41,109,77);
+        width: 90%;
+        margin: auto;
+    }
+
+    #cajaNavegacion ul {
+        width: 90%;
+        margin: auto;
+        padding: 0.5em;
+    }
+
+#cajaNavegacion {
+    width: 95%;
+    margin: auto;
+    background: white;
+    min-height: 400px;
+    border: 1px solid black;
+    padding-bottom:0.8em;
+}
+
+
+    #cajaNavegacion ul {
+        width: 82%;
+        margin: auto;
+        padding: 0.5em;
+        list-style-type: disc;
+    }
+
+    #cajaNavegacion li {
+        color: black;
+        font-family: arial;
+    }
+
+
+/* Navegacion*/
+.barraNav {
+    position:fixed;
+    width:110%;
+    margin: -8px;
+    height:55px;
+    background:#2C2C2C;
+    z-index: 10;
+    display:flex;
+    box-shadow: 0px 1px 3px rgba(0,0,0,0.5);
+}
+.barraNav p {
+    padding-left: 10px;
+    padding-top: 2px;
+}
+
+
+
+
+
+/**Imagenes**/
+/*La imagen que aparece en la parte superior izquierda de cada página*/
+.imagen01{ 
+    width:5%; /*el tamaño es relativo al tamaño de la ventana*/
+    max-width: 100px; /*el tamaño máximo será de 100px*/
+    min-width:40px; /*el tamaño mínimo será de 40px*/
+    border:1px solid black; /*el borde es negro*/
+    position: relative; /*la posición es fija*/
+    left:25px; /*está a 25px de la izquierda del borde de la ventana*/
+    top:20%; /*está en el 20% del tamaño de la altura de la barra*/
+}
+
+#imagenCabecera{
+    width: 150px;
+    text-align: center;
+}
+
+.imagen02{
+    width:200px;
+    margin:auto;
+}
+
+/*Galeria*/
+div.gallery {
+    margin: 5px;
+    border: 2px solid #ccc;
+    float: left;
+    width: 250px;
+    position:static;
+  }
+  
+  
+  div.gallery img {
+    width: 100%;
+    height: auto;
+  }
+  
+  div.desc {
+    padding: 15px;
+    text-align: center;
+    font-family:Montserrat;
+    font-size: 12px;
+    margin-top:-6px;
+    background:#ccc;
+    color:#1F1F1F;
+  }
+
+  .desc a{
+    color: #1F1F1F;
+    text-decoration-line: none;
+  }
+
+
+#galleryNav {
+    filter: alpha(opacity=60);
+    -moz-opacity: 0.6;
+    opacity: 0.6;
+    transition: all 1s linear;
+    border: 1px solid black;
+    box-shadow: 0 0 5px black;
+    float: left;
+    width: 30%;
+    position: static;
+    margin:5px;
+}
+
+#galleryNav:hover {
+    filter: alpha(opacity=100);
+    -moz-opacity: 1;
+    opacity: 1;
+    border: 1px solid transparent;
+    box-shadow: 0 0 15px black;
+}
+
+#galleryNav img {
+    width: 100%;
+    height: auto;
+}
+
+#galleryNav div.desc {
+    background: #01002c;
+    color: white;
+    padding: 5px;
+}
+
+ /* Index */
+
+ /*InfoNumeros*/
+#infoNumeros{
+    display:none;
+    margin: auto;
+    background: #ccc;
+    width: 80%;
+
+}
+
+#num{
+    position: relative;
+    margin: auto;
+    text-align: center;
+    color: #1F1F1F;
+    font-weight: bold;
+    font-family:Jost;
+    font-size: 1.5em;
+    border-bottom: 2px solid #1F1F1F;
+}
+
+.iN{
+    color:#1F1F1F;
+    font-family:Montserrat;
+    padding:10px;
+    z-index:1 
+}
+
+#nFondo{
+    color:#9A9A92;
+    font-family:Montserrat;
+    position:relative;
+    top:15px;
+    right:15px;
+    font-size: 150px;
+    text-align: right;
+    margin-top:-150px;
+    z-index:0;
+}
+
+
+#contenedorGaleria{
+    width:80%;
+    margin: auto;
+    margin-top:-70px ;
+}
+
+.galeria{
+    border:1px solid black;
+    background: black;
+    border-radius: 6px;
+    padding: 5px;
+    padding-top: -100px;
+    margin: auto;
+    width: 100%;
+}
+
+
+.btnGaleria{
+    background-color: black;
+    color:white;
+    padding:5px;
+    position:relative;
+    z-index:2;
+    top:250px;
+    height: 100px;
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+#btnAdelante{
+    left:100%;
+    margin-left: -10px;
+}
+
+#btnAtras{
+    margin-left: -10px;
+}
+
+
+#imgGaleria{
+    width: 100%;
+    margin: auto;
+}
+
+
+  /*Div Musica*/
+
+  div.musc {
+    margin: 5px;
+    border: 5px solid #ccc;
+    float:left;
+    width: 750px;
+    height: 300px;
+    position:static;
+  }
+
+  div.musc img{
+    width: 300px;
+    height: 300px;
+    position:static;
+    float:left;
+  }
+  
+  div.dmusc {
+    font-size:19px;
+    background:#ccc;
+    position: static;
+    width: 450px;
+    height: 300px;
+    float:right;
+  }
+
+  .dmusc p {
+    padding-top: 27%;
+    padding-left:20px;
+    padding-right: 15px;
+    font-family: Montserrat;
+    color: #1F1F1F;
+}
+
+/** CAJAS **/
+
+/** Especiales**/
+
+.cajaBlog{
+	margin:auto;
+	background: #f9f8db;
+	font-family: AncizarSerif;
+	color:black;
+	padding:0.5em;
+	border:1px solid #6F6F6F;
+	width:95%;
+}
+
+.cajaBlog h2 {
+    font-family: AncizarSerif;
+    font-size: 125%;
+    margin-right:1cm;
+    padding-left:1cm;
+    border-bottom: 1px solid black;
+}
+
+.cajaBlog h3 {
+	font-family: AncizarSerif;
+	font-size: 115%;
+	margin-left:0.5cm;
+	border-bottom:none;
+	margin-top:0.5em;
+}
+
+.cajaBlog p{
+    font-family: AncizarSerif;
+    font-size: 105%;
+    font-weight: normal;
+    margin:0.5em;
+}
+
+
+
+
+/** BOTONES **/
+#validar{
+    background:#EAEAEA;
+    border:2px solid black;
+    padding:4px;
+    border-radius:3px;
+    /*transform:;*/
+    transition: ease-in-out;
+    transition-duration:.5s;
+}
+
+#validar::after{
+    background: #468164;
+    left:-40px;
+    position:absolute;
+}
+
+#cambioFondo{
+    background: palevioletred;
+    background-image: url('../imagenes/btnCF.png');
+    background-size: 105px;
+    background-position: 50% 50%;
+    background-attachment: local;
+    box-shadow: 0px 1px 3px rgba(0,0,0,0.5);
+    border:none;
+    border-radius:0 0 5px 5px;
+    width: 59px;
+    height: 30px;
+    position: fixed;
+    right:20px;
+    top:55px;
+    z-index:11;
+    cursor:pointer;
+    margin-top:-8px;
+}
+
+.boton01{
+    color: #2C2C2C;
+    background: #ccc;
+    padding: 5px;
+    border: #2C2C2C 1px solid;
+    transition: ease-in-out;
+    transition-duration:.5s;
+    cursor: pointer;
+}
+
+.boton01::after{
+    background: #468164;
+    left:-40px;
+    position:absolute;
+}
+/** CONFIGURACIÓN CUANDO EL TAMAÑO DE LA VENTANA ES MENOR O IGUAL A 900px**/
+@media only screen and (max-width: 900px) {
+
+    .cuerpo{
+        background-color: rgba(256,256,256,0.15);
+        height:fit-content;
+        display: block;
+    }
+
+    .columnaLateral {
+        display:flex;
+    }
+    .textoNav{
+        margin-left:-5px;
+        margin-right:-5px;
+        width:200px;
+    }
+
+
+    #tituloPrincipal{
+        left:20%;
+        width:60%;
+    }
+    #imagenCabecera{
+        display:none;
+    }
+
+    .imagen01{ 
+        left:10px;
+    }
+
+    .btnGaleria{
+        top:150px;
+    }
+}
+
+
+
+/** CONFIGURACIÓN CUANDO EL TAMAÑO DE LA VENTANA ES MENOR O IGUAL A 600px**/    
+@media only screen and (max-width: 620px){
+    #tituloPrincipal{
+        left:5%;
+        width:90%;  
+    }
+
+    .textoNav {
+        display: none;
+    }
+
+    div.dmusc {
+        float:left;
+        width:300px;
+        height:120px;
+    }
+
+    div.musc {
+        width: 300px;
+        height: 420px;
+    }
+
+    .dmusc p {
+        padding-top: 15px;
+    }
+
+    .paginacentral {   
+        float:none;
+        width:90%;
+    }
+
+    .cardLateral {
+        margin-left:0px;
+    }
+
+    .card01{
+        margin-left:0px;
+    }
+
+    .columnaLateral {
+        padding-left: 0px;
+        margin-left:0px;
+        width: 80%;
+        margin:auto;
+    }
+
+    .cabecera{
+        height: 260px;
+    }
+
+    div.gallery {
+        float:none;
+        margin: none;
+        width:100%;
+        align-items: center;
+    }
+
+
+    #contenedorGaleria{
+        width:100%;
+        margin: auto;
+        margin-top:-70px ;
+    }
+
+    .btnGaleria{
+        top:150px;
+    }
+
+    #cambioFondo{
+        border-radius:0;
+        width: 25px;
+        height: 25px;
+        top:20px;
+        box-shadow: 0px 0px 3px rgba(0,0,0,0.5);
+    }
+}
