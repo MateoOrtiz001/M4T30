@@ -8,6 +8,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
 
 
+/* Prevenir scroll horizontal y asegurar medidas relativas */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
 
 /** Código CSS DE LA PÁGINA PRINCIPAL **/
 
@@ -35,8 +45,7 @@ body {
     width: 90%;
     margin: auto;
     display: block;
- //   padding-bottom: 25px;
-
+    padding-bottom: 25px; 
     box-shadow: 0 0 10px black;
 }
 
@@ -121,26 +130,30 @@ h2{
 }
 
 /** Caja inferior **/
-footer{
-    height:124px;
-    background:#2C2C2C;
-    padding: 40px;
-    margin-left: -10px;
-    margin-right: -8px;
-    margin-bottom: -10px;
+footer {
+    background: #2C2C2C;
+    padding: 40px 50px;
+    margin: 0;
+    text-align: left;
+    display: flex;                  /* usamos flexbox */
+    align-items: center;           /* alinea verticalmente al centro */
+    justify-content: left;       /* opcional: centra horizontalmente el conjunto */
+    gap: 20px;                     /* espacio entre imagen y texto */
 }
 
-footer img{
-    margin: -40px;
+footer img {
+    width: 200px;
+    height: auto;
+    margin: 0;
 }
-.texto_Inferior{
+
+.texto_Inferior {
     font-family: montserrat;
-    color:white;
-    font-size:30px;
-    position:relative;
-    left:50%;
+    color: white;
+    font-size: 1.2em;
+    margin: 0;
+    text-align: left;
 }
-
 /*** DISTRIBUCIÓN ***/
 /*Central*/
 .contenidoCentral {
@@ -266,10 +279,14 @@ h2{
     opacity: 1;
 }
 
-.texto_Inferior{
-    position: static;
-    font-size: 110%;
-    margin-left: 60px;
+footer {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+.texto_Inferior {
+    margin-top: 10px;
 }
 
 .imagen01{
