@@ -22,7 +22,7 @@ body {
 /** Código CSS DE LA PÁGINA PRINCIPAL **/
 
 body {
-    background-image: url("imagenes/fondo.png");
+    background-image: url("imagenes/fondo2.png");
     background-attachment: fixed;
     background-size: cover;
     background-position: center;
@@ -35,17 +35,18 @@ body {
 /** Estílo de la caja principal **/
 .pagina {
     border: 1px solid black;
-    background: url("blog/imagenes/haloInf.png");
+    background: url("imagenes/NS02b.png");
     background-attachment: fixed;
     background-size: cover;
-    background-position: center;
+    background-position: center 20%; /* 20% desde la parte superior */
     filter: alpha(opacity=99);
     -moz-opacity: 0.99;
     opacity: 0.99;
     width: 90%;
     margin: auto;
+    margin-bottom: 50px;
     display: block;
-    padding-bottom: 25px; 
+    padding-bottom: 0; 
     box-shadow: 0 0 10px black;
 }
 
@@ -58,6 +59,7 @@ body {
 .capaSup:hover{
     background: rgb(2,1,42,0.5);
     background-blend-mode: hard-light;
+    filter: saturate(1.5);
 }
 
 
@@ -131,20 +133,51 @@ h2{
 
 /** Caja inferior **/
 footer {
+    display: flex;
+    justify-content: space-between; /* Separa las dos secciones */
     background: #2C2C2C;
+    box-shadow: 0px -2px 20px black;
     padding: 40px 50px;
     margin: 0;
     text-align: left;
     display: flex;                  /* usamos flexbox */
-    align-items: center;           /* alinea verticalmente al centro */
-    justify-content: left;       /* opcional: centra horizontalmente el conjunto */
+    justify-content: space-around;
     gap: 20px;                     /* espacio entre imagen y texto */
+    height: 250px;
 }
 
-footer img {
+.footer-left img {
     width: 200px;
     height: auto;
     margin: 0;
+    border:5px solid black;
+    box-shadow: 0px 0px 10px black;
+}
+
+.footer-left {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Espacio entre imagen y texto */
+}
+
+.footer-right {
+    text-align: center;
+    align-items: flex-end;
+}
+
+.social-links {
+    display: flex;
+    gap: 15px; /* Espacio entre iconos */
+    justify-content: flex-end; /* Alinea iconos a la derecha */
+}
+
+.social-links img {
+    width: 50px; /* Tamaño de los iconos */
+    transition: transform 0.3s ease;
+}
+
+.social-links a:hover img {
+    transform: scale(1.2); /* Efecto hover en iconos */
 }
 
 .texto_Inferior {
@@ -152,25 +185,30 @@ footer img {
     color: white;
     font-size: 1.2em;
     margin: 0;
-    text-align: left;
+    text-align: center;
 }
 /*** DISTRIBUCIÓN ***/
 /*Central*/
 .contenidoCentral {
-    width: 80%;
+    width: 75%;
     margin: auto;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-content: center;
-    gap: 10px;
+    flex-flow: row wrap;
+    gap: 20px;
+}
+
+.contenidoCentral a {
+    flex: 0 0 calc(42% - 10px); /* 50% del ancho - gap */
+    text-align: center; /* Opcional: centra la imagen dentro del <a> */
 }
 
 .contenidoCentral img {
-    width: 85%;
-    position:static;
-    float:left;
-    margin: auto 50px;
+    width: 100%; /* La imagen ocupa el 100% del <a> */
+    height: auto; /* Mantiene la proporción */
+    display: block; /* Elimina espacio fantasma debajo de la imagen */
 }
 
 /*Celda*/
@@ -189,17 +227,42 @@ footer img {
 
 /*ImagenTabla*/
 /* Opacidad  */
-.opacity {
+.opacity-left {
     filter:alpha(opacity=50);
     -moz-opacity: 0.5;
     opacity: 0.5;
     transition:all 1s linear;
+    transition: all 0.5s ease-in-out;
+    z-index: 49;
 }
  
-.opacity:hover {
+.opacity-left:hover {
     filter:alpha(opacity=100);
     -moz-opacity: 1.0;
     opacity: 1.0;
+    transform: scale(1.05) rotate(1deg);
+    box-shadow: 0 0 10px rgba(250, 250, 25, 0.2);
+    filter: saturate(1.5);
+    z-index: 50;
+}
+
+.opacity-right {
+    filter:alpha(opacity=50);
+    -moz-opacity: 0.5;
+    opacity: 0.5;
+    transition:all 1s linear;
+    transition: all 0.5s ease-in-out;
+    z-index: 49;
+}
+ 
+.opacity-right:hover {
+    filter:alpha(opacity=100);
+    -moz-opacity: 1.0;
+    opacity: 1.0;
+    transform: scale(1.05) rotate(-1deg);
+    box-shadow: 0 0 10px rgba(250, 250, 25, 0.2);
+    filter: saturate(1.5);
+    z-index: 50;
 }
 
 /*Imagen de Retorno */
@@ -236,6 +299,7 @@ footer img {
 @media only screen and (max-width:700px) {
     /*** TABLA ***/
 /*Tabla*/
+
 
 
 div.imagen{
@@ -283,6 +347,7 @@ footer {
     flex-direction: column;
     align-items: center;
     text-align: center;
+    height: auto;
   }
 
 .texto_Inferior {
@@ -297,6 +362,9 @@ footer {
     background:none;
     box-shadow:none;
     color:white;
+    text-shadow: 2px 2px 2px black;
+    background-blend-mode: hard-light;
+    filter: saturate(1.2);
 }
 
 .capaSup:hover{
@@ -312,5 +380,26 @@ footer {
     margin:auto;
     color: white;
 }
+
+.opacity-left {
+    -moz-opacity: 1;
+    opacity: 1;
+}
+ 
+.opacity-left:hover {
+    box-shadow: 0 0 10px rgba(250, 250, 25, 0.2);
+    filter: saturate(1.5);
+}
+
+.opacity-right {
+    -moz-opacity: 1;
+    opacity: 1;
+}
+ 
+.opacity-right:hover {
+    box-shadow: 0 0 10px rgba(250, 250, 25, 0.2);
+    filter: saturate(1.5);
+}
+
 
 }
