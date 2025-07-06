@@ -354,10 +354,6 @@ footer {
     margin-top: 10px;
 }
 
-.imagen01{
-    left: 10px;
-}
-
 .capaSup{
     background:none;
     box-shadow:none;
@@ -399,6 +395,10 @@ footer {
 .opacity-right:hover {
     box-shadow: 0 0 10px rgba(250, 250, 25, 0.2);
     filter: saturate(1.5);
+}
+
+.imagen01{
+    display:none;
 }
 
 
